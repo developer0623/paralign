@@ -1,0 +1,98 @@
+<ion-view id="tutorial"
+          title=""
+          cache-view="false"
+          hide-back-button="true"
+          ng-init="setStyleHeaderBar('transparent')"
+          no-drag-left>
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+
+  <ion-content class="tutorial-slides" ng-class="pagerColorClass" scroll="false">
+
+    <ion-slide-box on-slide-changed="changePagerColor($index)">
+
+      <ion-slide class="slide1">
+        <div class="part-top">
+          <img ng-if="isPageLoaded" class="screen-img fadein" src="img/tutorial/1-myMind-img.png">
+        </div>
+
+        <div class="part-bottom">
+          <h4 ng-if="isPageLoaded" class="fadein">Track your Thoughts</h4>
+          <p ng-if="isPageLoaded" class="fadein">
+            Keep track of your thoughts and
+            gain insight into your thought patterns
+            through clusters.
+          </p>
+        </div>
+      </ion-slide>
+
+
+
+      <ion-slide class="slide2">
+        <div class="part-top">
+          <img class="screen-img" src="img/tutorial/2-simMind-img.png">
+        </div>
+
+        <div class="part-bottom">
+          <h4>Connect with Similar Minds</h4>
+          <p>
+            Find others thinking and feeling the
+            same way. Talk about what’s going
+            on with someone who relates.
+          </p>
+        </div>
+      </ion-slide>
+
+
+
+      <ion-slide class="slide3">
+        <div class="part-top">
+          <img class="screen-img" src="img/tutorial/3-wonMind-img.png">
+        </div>
+
+        <div class="part-bottom">
+          <h4>Browse Wondering Minds</h4>
+          <p>
+            See what others are thinking about.
+            Let them know that they are not
+            alone and chat with them.
+          </p>
+        </div>
+      </ion-slide>
+
+
+
+      <ion-slide class="slide4">
+        <div class="part-top">
+          <img class="screen-img" src="img/tutorial/4-connections-img.png">
+        </div>
+
+        <div class="part-bottom">
+          <h4>Chat Anonymously</h4>
+          <p>
+            Connect with others around the
+            world. You can chat anonymously,
+            one-on-one and with groups.
+          </p>
+        </div>
+      </ion-slide>
+
+    </ion-slide-box>
+
+    <ion-footer>
+      <!--button class="btn-skip left fadein"
+              ng-if="isPageLoaded"
+              ng-show="activeSlideIndex < 3"
+              ng-click="activeSlideIndex === 3 ? finish(true) : finish(false)"> {{ activeSlideIndex < 3 ? 'Skip' : '' }} </button-->
+
+      <button class="btn-skip fadein"
+              ng-if="isPageLoaded"
+              ng-click="finish(true)"> {{ activeSlideIndex === 3 ? 'Start' : 'Skip' }} </button>
+    </ion-footer>
+
+  </ion-content>
+</ion-view>

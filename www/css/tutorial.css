@@ -1,0 +1,304 @@
+#tutorial {
+  background: #ff6a6a;
+}
+
+#tutorial ion-content .background {
+  width: 100%;
+}
+
+#tutorial ion-content .background-top {
+  background: #E69C49;
+  height: 52%;
+  position: absolute;
+}
+
+#tutorial ion-content .background-bottom {
+  background: #E69C49;
+  height: 48%;
+  position: absolute;
+  top: calc(45% + 1px);
+}
+
+#tutorial ion-content.tutorial-slides {
+  top: 0;
+}
+
+#tutorial ion-content.tutorial-slides .slider {
+  height: 100%;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-top,
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom {
+  height: 50%;
+  text-align: center;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-top {
+  height: 56%;
+  overflow: hidden;
+  display: block;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-top img {
+  width: calc(100% - 6.4rem);
+  position: absolute;
+  top: 4.8rem;
+  left: 3.2rem;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom {
+  height: 44%;
+  position: absolute;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom {
+  padding: 0 5vh;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom img {
+  height: 8rem;
+  margin-top: 3vh;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom h4 {
+  font: 2.4rem/3.2rem ProximaNova-Bold, OpenSans-Bold, sans-serif;
+  color: #fff;
+  margin: 1.6rem 0 0 0;
+  text-align: left;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide .part-bottom p {
+  font: 1.8rem/2.4rem ProximaNova-Regular, OpenSans, sans-serif;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+#tutorial ion-content .btn-skip {
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: none;
+  position: absolute;
+  bottom: 2.4rem;
+  width: calc(100% - 6.4rem);
+  height: 5.6rem;
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.8rem;
+  margin: 0 3.2rem;
+}
+
+#tutorial ion-content ion-footer {
+  border: none;
+  box-shadow: none;
+  position: absolute;
+  bottom: 0;
+  width: calc(100%);
+  height: 5.6rem;
+  color: #fff;
+  background: rgba(0,0,0,0.24);
+  font-family: OpenSans, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding: 0.8rem;
+}
+
+#tutorial ion-content ion-footer .btn-skip {
+  border: none;
+  box-shadow: none;
+  background-color: transparent !important;
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.8rem;
+  padding: 0.8rem 1.6rem;
+  text-align: right;
+  float: right;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  line-height: 2.4rem;
+  margin: 0;
+}
+
+#tutorial ion-content ion-footer .btn-skip.left {
+  text-align: left;
+  float: left;
+}
+
+
+
+/*****************
+ Slide 1
+*****************/
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide1 {
+  background: #E69C49;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-1 .slider-pager .slider-pager-page {
+  color: rgba(255,255,255,0.56); /* #ffadad */
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-1 .slider-pager .slider-pager-page.active {
+  color: rgba(255,255,255,1); /* #bd4c4c */
+}
+/*****************
+ End Slide 1
+*****************/
+
+
+
+/*****************
+ Slide 2
+*****************/
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide2 {
+  background: #726991;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-2 .slider-pager .slider-pager-page {
+  color: rgba(255,255,255,0.56); /* color: #fdd089 */
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-2 .slider-pager .slider-pager-page.active {
+  color: #rgba(0,0,0,0.8);
+}
+/*****************
+ End Slide 2
+*****************/
+
+
+
+/*****************
+ Slide 3
+*****************/
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide3 {
+  background: #5C686E;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-3 .slider-pager .slider-pager-page {
+  color: rgba(255,255,255,0.56); /* color: #fdc89c */
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-3 .slider-pager .slider-pager-page.active {
+  color: rgba(0,0,0,0.8);
+}
+/*****************
+ End Slide 3
+*****************/
+
+
+
+/*****************
+ Slide 4
+*****************/
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide4 {
+  background: #4DA3B8;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-4 .slider-pager .slider-pager-page {
+  color: rgba(255,255,255,0.56); /* color: #a2d3c7 */
+}
+
+/*#tutorial ion-content.tutorial-slides.active-slide-4 .slider-pager .slider-pager-page .ion-pager-override {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: block;
+  background: rgba(255,255,255,1);
+  border-radius: 50%;
+  border: 4px solid #4DA3B8;
+}*/
+
+#tutorial ion-content.tutorial-slides.active-slide-4 .slider-pager .slider-pager-page.active {
+  color: rgba(0,0,0,0.8);
+}
+/*****************
+ End Slide 4
+*****************/
+
+
+
+/*****************
+ Slide 5
+*****************
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide5 .part-top {
+  background: #bd4c4c;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide5 .part-bottom {
+  background: #ff7979;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-5 .slider-pager .slider-pager-page {
+  color: #ffadad
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-5 .slider-pager .slider-pager-page.active {
+  color: #bd4c4c;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-5 .btn-skip {
+  background: #bd4c4c;
+}
+/*****************
+ End Slide 5
+*****************/
+
+
+
+/*****************
+ Slide 6
+*****************
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide6 .part-top {
+  background: #7a9670;
+}
+
+#tutorial ion-content.tutorial-slides .slider ion-slide.slide6 .part-bottom {
+  background: #a3c895;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-6 .slider-pager .slider-pager-page {
+  color: #c8debf
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-6 .slider-pager .slider-pager-page.active {
+  color: #7a9670;
+}
+
+#tutorial ion-content.tutorial-slides.active-slide-6 .btn-skip {
+  background: #7a9670;
+}
+/*****************
+ End Slide 6
+*****************/
+
+
+
+#tutorial ion-content.tutorial-slides  .slider .slider-pager {
+  /* bottom: 10rem; */
+  bottom: 0;
+  height: 5.6rem;
+  padding: 1.8rem;
+  width: calc(100% - 18rem);
+  left: 9rem;
+}
+
+#tutorial ion-content.tutorial-slides  .slider .slider-pager .slider-pager-page {
+  font-size: 1.8rem;
+  margin: 0 0.6rem;
+  color: rgba(255,255,255,0.56);
+  opacity: 1;
+  vertical-align: middle;
+  height: auto;
+  width: auto;
+}
+
+#tutorial ion-content.tutorial-slides  .slider .slider-pager .slider-pager-page.active {
+  color: rgba(255,255,255,1);
+}

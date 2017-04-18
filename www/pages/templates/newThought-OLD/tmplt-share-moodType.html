@@ -1,0 +1,56 @@
+<ion-content scroll="false" class="tmplt-moodType fadein">
+  <h2 class="title fadein"> What's your mood? </h2>
+
+  <div class="moodbox fadein">
+    <div class="row">
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('happy'); nextStep();">
+            <img class="fadein" src="img/moods/brown/happy.png"></ion-radio>
+          <h2>Happy</h2>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('peaceful'); nextStep();">
+            <img class="fadein" src="img/moods/brown/peaceful.png"></ion-radio>
+          <h2>Peaceful</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('sad'); nextStep();">
+            <img class="fadein" src="img/moods/brown/sad.png"></ion-radio>
+          <h2>Sad</h2>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('mad'); nextStep();">
+            <img class="fadein" src="img/moods/brown/mad.png"></ion-radio>
+          <h2>Mad</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('nervous'); nextStep();">
+            <img class="fadein" src="img/moods/brown/nervous.png"></ion-radio>
+          <h2>Nervous</h2>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="holdicon fadein">
+          <ion-radio icon="false" class="facebg" ng-click="setMoodType('neutral'); nextStep();">
+            <img class="fadein" src="img/moods/brown/neutral.png"></ion-radio>
+          <h2>Neutral</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

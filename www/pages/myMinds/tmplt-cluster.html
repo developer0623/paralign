@@ -1,0 +1,11 @@
+<div>
+  <div class="part">
+    <h2 ng-bind="selectedCluster.summary_text || 'Cluster'"></h2>
+
+    <ion-list class="thoughts-list">
+      <div ng-repeat="thought in selectedCluster.thoughts | orderBy: 'createdAt': true">
+        <ng-include src="'pages/myMinds/tmplt-one-thought.html'"></ng-include>
+      </div>
+    </ion-list>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<ion-view id="wonderingMinds"
+          title="Wondering Minds"
+          no-drag-right
+          no-drag-left
+          hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'"
+                ng-click="$state.go('home');">
+    </ng-include>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear"
+            ng-if="(cards && cards.length)"
+            ng-click="reportModal(); trackEvent('wondermenu')">
+      <i class="button-icon icon button button-clear ion-android-more-vertical"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ion-content scroll="false">
+
+    <div class="cards-template" ng-if="(cards && cards.length) || isFetching">
+      <div class="fake-cards fadein">
+        <div class="fake-card fake-card-2"></div>
+        <div class="fake-card fake-card-1"></div>
+      </div>
+
+
+      <td-cards class="flip" delegate-handle="cards">
+        <td-card ng-repeat="card in cards"
+                 on-transition-left="cardSwiped('left', $index)"
+                 on-transition-right="cardSwiped('right', $index)"
+                 on-swipe-up="cardSwiped('up', $index)"
+                 on-swipe-down="cardSwiped('down', $index)"
+                 on-destroy="nextCard($index)"
+                 ng-if="$index === 0"
+                 data-id="{{ card.id }}"
+                 class="card-{{$index}} card-fadein"
+                 ng-class="{ 'lock-move' : lockMoveCard }">
+
+          <div class="flip-card">
+            <div ng-if="card"
+                 class="card-side front-side face">
+
+              <div class="card-header">
+                <span class="mood">
+                  <span class="img-wrapper fadein">
+                    <img class="fadein" ng-src="img/moods/new/{{ isCorrectMood(card.mood) ? card.mood : 'neutral' }}-{{ card.intensity || 1 }}.png"/>
+                  </span>
+                </span>
+                <!--span class="intensity fadein" ng-class="'intensity-color-' + card.intensity">
+                  <span class="intensity-content" ng-bind="card.intensity || 0"></span>
+                </span-->
+
+                <p class="date"
+                   ng-bind="card.createdAt | dateMindFormat"></p>
+
+              </div>
+
+              <div class="card-content" style="height:calc(100% - 13.5rem);">
+                <div class="content-wrapper">
+                  <p class="text align-left"
+                     ng-class="{'small-text': card.content.length > charactersLimit}"
+                     ng-bind="card.content"></p>
+                </div>
+              </div>
+
+
+              <div class="card-footer full">
+
+                <div class="part-bottom">
+                  <span class="fadein">
+                    <button class="btn-connect"
+                            ng-click="connect(card); trackEvent('wonderconnect');">
+                      <img class="card-fadein" src="img/chat-icon.png"/>
+                    </button>
+
+                    <button class="btn-not-alone"
+                            ng-if="!isNotAlone(card)"
+                            ng-click="setNotAlone(card);  trackEvent('wonderYANA');">
+                      <img class="card-fadein" src="img/heart-outline.png"/>
+                    </button>
+
+                    <button class="btn-not-alone inactive"
+                            ng-if="isNotAlone(card)">
+                      <img class="heart-fadein" src="img/heart-filled.png"/>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td-card>
+      </td-cards>
+    </div>
+
+
+
+
+
+    <div class="message-full-page fadein"
+         ng-if="!isFirstLoading && (!cards || !cards.length) && !isFetching">
+      <img src="img/icon_wonMind.png"/>
+      <p> Keep sharing your thoughts! <br>
+          We will find similar ones. </p>
+    </div>
+
+
+  </ion-content>
+</ion-view>

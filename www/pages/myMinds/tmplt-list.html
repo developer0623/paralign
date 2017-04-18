@@ -1,0 +1,76 @@
+<div>
+  <div class="part">
+    <h2> Clusters </h2>
+
+    <ion-list class="thoughts-clusters"
+              ng-if="!isCaseEmptyClusters()">
+      <ion-item class="thought-item fadein-quick"
+                ng-repeat="cluster in myMindsClusters"
+                ng-click="openCluster(cluster)"
+                ng-if="cluster">
+
+        <div ng-if="selectedThought"
+             class="item-unselected fadein"
+             ng-click="deselectThought()"></div>
+
+        <div class="content-part content-main">
+          <p ng-bind="::cluster.summary_text"></p>
+        </div>
+
+        <div class="content-part content-right">
+          <div class="t-row">
+              <span class="intensity-color {{ getAverageMood(cluster) }}"
+                    ng-bind="(cluster.thoughts.length || '0') + (cluster.thoughts.length == 1 ? ' post' : ' posts') "></span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <div class="small-message fadein-slow"
+         ng-if="isCaseEmptyClusters()">
+      <img src="img/icon_wondering_mind.png"/>
+      <h2> No clusters yet </h2>
+      <p>
+        Keep journaling your thoughts and this page will get updated automatically!
+      </p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="part">
+    <h2> Thoughts </h2>
+
+    <ion-list class="thoughts-list js-thoughts-list"
+              ng-if="!isCaseEmptyList()">
+
+      <!-- Template for a thought which was created just now -->
+      <div ng-if="isCaseToShowProcessingFile()">
+        <div ng-repeat="thought in [processingThought] | orderBy: 'createdAt': true">
+          <ng-include src="'pages/myMinds/tmplt-one-thought.html'"></ng-include>
+        </div>
+      </div>
+
+      <div ng-repeat="thought in myMindsList | orderBy: 'createdAt': true">
+        <ion-item class="date-item"
+                  ng-if="isCaseToShowDateItem() ? isOtherMonth(thought, processingThought) : isOtherMonth(thought, myMindsList[$index -1])"
+                  ng-bind="thought.createdAt | date: 'MMMM'">
+        </ion-item>
+
+        <ng-include src="'pages/myMinds/tmplt-one-thought.html'"></ng-include>
+
+      </div>
+    </ion-list>
+  </div>
+
+
+
+
+  <ion-infinite-scroll
+      ng-if="isCaseToEnableInfiniteScroll()"
+      on-infinite="loadMore()"
+      distance="20%">
+  </ion-infinite-scroll>
+</div>

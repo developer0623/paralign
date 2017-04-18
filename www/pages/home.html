@@ -1,0 +1,82 @@
+<ion-view id="home"
+          title="Paralign"
+          hide-back-button="true"
+          can-drag-menu>
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+  </ion-nav-buttons>
+
+  <ion-nav-title align="center"> Paralign </ion-nav-title>
+
+  <ion-nav-buttons side="right">
+    <!-- Nothing -->
+  </ion-nav-buttons>
+
+
+  <ion-content class="has-header" scroll="false">
+    <table class="menu-table">
+      <tr>
+        <td>
+          <div class="button share" ui-sref="newThought">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_pencil.png"/>
+              <span>New Thought</span>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="button mind" ui-sref="myMinds">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_myMind.png"/>
+              <span>My Mind</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <div class="button coach" ui-sref="companion">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_companion.png"/>
+              <span>Companion</span>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="button similar" ui-sref="similarMinds">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_simMind.png"/>
+              <span>Similar Minds</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <div class="button connections" ui-sref="connections">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_connect.png"/>
+              <span>Chats</span>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="button wondering" ui-sref="wonderingMinds">
+            <div class="imgcont fadein" ng-if="isImagesCached">
+              <img src="img/icon_wonMind.png"/>
+              <span>Wondering Minds</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </ion-content>
+</ion-view>

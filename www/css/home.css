@@ -1,0 +1,90 @@
+#home {
+  background: #ff6a6a;
+}
+
+#home ion-content {
+  width: 100%;
+}
+
+#home ion-content .menu-table {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#home ion-content .menu-table tr {}
+#home ion-content .menu-table tr td {
+  width: 50%;
+}
+
+#home ion-content .menu-table tr td .button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  display: table;
+}
+
+#home ion-content .menu-table tr td .button .imgcont {
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#home ion-content .menu-table tr td .button .imgcont img {
+  width: calc(100% - 9.6rem);
+  height: auto;
+}
+
+#home ion-content .menu-table tr td .button .imgcont span {
+  display: block;
+  color: #fff;
+  line-height: 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+}
+
+#home .share {
+  background-color: #eb4c53;
+}
+
+#home .mind {
+  background-color: #f9a12e;
+}
+
+#home .coach {
+  background-color: #1f625f;
+}
+
+#home .wondering {
+  background-color: rgba(252, 101, 101, 1);
+}
+
+#home .connections {
+  background-color: rgba(163, 200, 149, 1);
+}
+
+#home .similar {
+  background-color: rgba(100, 182, 162, 1);
+}
+
+#home .share {
+  background-color: rgba(255, 121, 121, 1);
+}
+
+#home .mind {
+  background-color: rgba(251, 176, 59, 1);
+}
+
+#home .coach {
+  background-color: rgba(252, 163, 90, 1);
+}
+
+#home .filterbydate {
+  background-color: rgba(253, 235, 184, 1);
+}
+
+#home .filterbyclusters {
+  background-color: rgba(252, 101, 101, 1);
+}

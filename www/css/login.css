@@ -1,0 +1,404 @@
+#login {
+  background-color: #ff6a6a;
+}
+
+#login .scroll {
+  height: 99%;
+}
+
+#login ion-content {
+  width: 100%;
+  background: none;
+}
+
+#login ion-content.has-footer {
+  bottom: 5.6rem;
+}
+
+#login ion-content ng-include {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+#login ion-content .content {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+#login ion-content .clear-row {
+  height: 2rem;
+  width: 100%;
+  clear: both;
+  display: block;
+}
+
+#login .content .part {
+  display: table-row;
+  height: 50%;
+}
+
+#login .content .part-top .logoholder {
+  display: block;
+  background: none;
+  text-align: center;
+}
+
+#login .content .part-top .logoholder .logo-wrapper {
+  width: 100%;
+  height: 13rem;
+  margin: 23% auto 0 auto;
+  background: inherit;
+  text-align: center;
+  display: inline-block;
+}
+
+#login .content .part-top .logoholder .logo-wrapper img {
+  height: 100%;
+}
+
+#login .content .part-top .logoholder h1 {
+  color: #fff;
+  margin: 0.4rem 0 0 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  font-family: ProximaNova-Bold, sans-serif;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+#login .content .part-top h2 {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: ProximaNova-Regular, sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 0.8rem 0 0 0;
+  z-index: 10;
+}
+
+
+#login .content .part-top .top-right-button {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-family: ProximaNova-Semibold, sans-serif;
+  position: absolute;
+  right: 8%;
+  top: 1.6rem;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+#login .content .part-top .top-right-button.ios-mode {
+  top: 3rem;
+  right: 5%;
+}
+
+
+
+#login .part-bottom {
+  background: none;
+}
+
+#login .part .content-rows {
+  margin: 1.6rem auto 0 auto;
+  padding: 0;
+  width: calc(100% - 5.6rem);
+  height: calc(100% - 6.4rem);
+  display: table;
+  width: 80%;
+  height: 88%;
+}
+
+#login .part .content-rows .content-row {
+  display: table-row;
+}
+
+#login .part .content-rows .content-row.clear-row {
+  height: 0.7rem;
+}
+
+
+#login .part .content-rows button {
+  box-shadow: none;
+  border: none;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  color: rgba(0,0,0,0.8);
+  padding: 0.4rem;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  margin: 0.4rem 0;
+  border-radius: 0.2rem;
+}
+
+#login .content-rows button i.icon {
+  font-size: 2.4rem;
+  margin: 0 0 0 1.6rem;
+  padding: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#login .content-rows button .button-title {
+  line-height: 3.2rem;
+  font-size: 1.8rem;
+  font-family: ProximaNova-Semibold, sans-serif;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 1.6rem;
+  line-height: 100%;
+}
+
+#login .part .content-rows .button-input {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0;
+}
+
+#login .part .content-rows input {
+  background: none;
+  color: #fff;
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  box-shadow: none;
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.1rem 2rem;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+#login .part .content-rows input::-webkit-input-placeholder {
+  color: #f0f0f0;
+}
+
+#login .content-rows .row-info {
+  color: #fff;
+  text-align: center;
+}
+
+#login .content-rows .row-info p {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 0.4rem;
+  margin: 0;
+}
+
+
+#login .list-inputs {
+  padding-top: 2.4rem;
+}
+
+#login .list-inputs.ios-mode {
+  padding-top: 3.5rem;
+}
+
+#login .list-inputs li {
+  padding: 0;
+  position: relative;
+}
+
+#login .list-inputs li.item-title span {
+  text-align: left;
+  color: #fff;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
+  font-family: ProximaNova-Semibold, sans-serif;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#login .list-inputs li.item-text span {
+  text-align: left;
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-family: ProximaNova-Regular, sans-serif;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+#login .list-inputs li .item-md-label {
+  margin: 0;
+  padding: 2.4rem 0.4rem 0 0.4rem;
+  width: 100%;
+  border: none;
+}
+
+#login .list-inputs li .item-md-label input {
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  font-family: ProximaNova-Regular, sans-serif;
+  height: 3.2rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding: 0.2rem 2.4rem 0.2rem 0;
+}
+
+#login  .list-inputs li .item-md-label .input-label {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  -webkit-transform: translate3d(0,-2.5rem,0) scale(1);
+          transform: translate3d(0,-2.5rem,0) scale(1);
+}
+
+#login .list-inputs li .item-md-label input.used~.input-label,
+#login .list-inputs li .item-md-label input:focus~.input-label {
+  text-transform: none;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  -webkit-transform: translate3d(0,-5rem,0) scale(.9);
+          transform: translate3d(0,-5rem,0) scale(.9);
+}
+
+#login .list-inputs li i.input-icon-ok {
+  font-size: 3.6rem;
+  line-height: 4rem;
+  color: #fff;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0;
+}
+
+
+
+#login .list-inputs li.item-button {
+  margin-top: 1.6rem;
+}
+
+#login .list-inputs li.item-button button {
+  box-shadow: none;
+  border: none;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  color: #777777;
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+  height: 4.8rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+#login .list-inputs li.item-button button span {
+  line-height: 2.4rem;
+  font-size: 1.8rem;
+  font-family: ProximaNova-Semibold, sans-serif;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  color: #ff6a6a;
+}
+#login .list-inputs li.item-button button:disabled span {
+  color: rgba(119, 119, 119, 0.6);
+}
+
+
+
+
+
+#login .tmplt-login-email form,
+#login .tmplt-forgot-password form {
+  display: block;
+  margin: 2.4rem auto 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+#login .tmplt-login-email .list-inputs li.item-forgot-password {
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-decoration: underline;
+  color: #fff;
+  margin-top: 0.8rem;
+  width: 48%;
+}
+
+
+
+
+
+
+
+
+#login .tmplt-login-warning .content-rows .content-row.row-info {
+  text-align: left;
+}
+
+#login .tmplt-login-warning .content-rows .content-row button span {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  color: #ff6a6a;
+}
+
+#login .tmplt-login-warning .content-rows .content-row button span {
+  text-align: center;
+  color: #ff6a6a;
+}
+
+
+/* ion-footer-bar */
+#login ion-footer-bar {
+  height: 5.6rem;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0;
+}
+
+#login ion-footer-bar button {
+  display: block;
+  box-shadow: none;
+  border: none;
+  background: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 5.6rem;
+  color: #fff;
+  font-size: 1.8rem;
+  min-height: 4.8rem;
+}
+
+#login ion-footer-bar button i {
+  font-size: 2.4rem;
+  position: absolute;
+  left: 2.4rem;
+  left: 8%;
+  line-height: 5.6rem;
+}
+
+#login ion-footer-bar button span {
+  font-size: 1.8rem;
+  font-family: ProximaNova-Regular, sans-serif;
+  line-height: 2rem;
+}
+
+#login ion-footer-bar button.underline {
+  text-decoration: underline;
+}

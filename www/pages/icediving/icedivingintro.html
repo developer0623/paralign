@@ -1,0 +1,56 @@
+<ion-view id="iceDiving"
+          hide-back-button="true"
+          title=""
+          no-drag-left
+          ng-init="setStyleHeaderBar('transparent')">
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon"
+            ui-sref="companion">
+      <i class="icon-close-ice"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon"
+            ng-click="openModal('guide-info-ice-diving'); trackEvent('icedivinginfo')">
+      <i class="icon-info-ice"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="intro" scroll="false">
+    <h1>
+      Ice Diving
+    </h1>
+
+    <h4>
+      FOR INTENSE EMOTIONS
+    </h4>
+
+    <ion-slide-box>
+      <ion-slide>
+        <div class="slide-content">
+          <p>
+            How does it work? We have what’s called the ‘Diving Reflex’ that
+            stimulates our vagus nerve and slows our heart rate to conserve energy.
+          </p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide-content">
+          <p>
+            Ice diving is scientifically proven to slow down our
+            heart rate and help us regulate out-of-control emotions.
+          </p>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <button class="action-button" ui-sref="icediving" ng-click="trackEvent('icedivingstart');">
+      Let's get started!
+    </button>
+
+  </ion-content>
+</ion-view>

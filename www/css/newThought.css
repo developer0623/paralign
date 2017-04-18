@@ -1,0 +1,38 @@
+#newThought {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+#newThought .tmplt-mindText {
+  padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+}
+
+#newThought .img-wrapper {
+  text-align: center;
+  padding: 0;
+  height: 0;
+}
+
+#newThought .img-wrapper img {
+  display: inline-block;
+  /*height: 14vh;*/
+  /*width: 14vh;*/
+  height: 10vh;
+  width: 10vh;
+}
+
+#newThought textarea {
+  font-size: 1.8rem;
+  margin-top: 0;
+  border-bottom: solid 2px #979797;
+  height: auto;
+  max-height: 25vh;
+  min-height: 2.4rem;
+  line-height: 2.4rem;
+  resize: none;
+  text-align: left;
+  padding: 0.4rem 0.4rem 0.8rem 0.4rem;
+  width: calc(100% - 4.8rem);
+  font-family: ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  width: calc(100% - 1.6rem); /* GUS */
+}

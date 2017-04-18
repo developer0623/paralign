@@ -1,0 +1,69 @@
+<ion-view id="lake"
+          hide-back-button="true"
+          title=""
+          no-drag-left
+          ng-init="setStyleHeaderBar('transparent')">
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon"
+            ui-sref="companion">
+      <i class="icon-close-sun"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon"
+            ng-click="openModal('guide-info-calm-lake'); trackEvent('calmlakeinfo')">
+      <i class="icon-info-sun"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="intro" scroll="false">
+    <h1>
+      Calm Lake
+    </h1>
+    <h4>
+      GUIDED MEDITATION
+    </h4>
+
+    <ion-slide-box show-pager="false">
+      <ion-slide>
+        <div class="slide-content">
+          <p>
+            Sit in an upright but comfortable position.
+            Now just notice your breath without changing it.
+          </p>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+    <button ng-if="isGuidePaid()"
+            class="action-button"
+            ui-sref="lake"
+            ng-click="trackEvent('calmlakestart'); trackEvent('calmlakethought');">
+      Lets get started!
+    </button>
+
+    <button ng-if="!isGuidePaid() && !product.price"
+            class="action-button has-icon">
+      <i class="ion-android-lock"></i>
+      <span> Sorry, it's locked </span>
+    </button>
+
+    <button ng-if="!isGuidePaid() && product.price"
+            class="action-button has-icon"
+            ng-click="doPayment(); trackEvent('calmlakepurchase');">
+      <i class="icon-lock"></i>
+      <span> Purchase {{ ::product.price }} </span>
+    </button>
+
+
+    <button ng-if="!isGuidePaid() && !product.price && platform === 'android'"
+            class="circle-btn"
+            ng-click="infoAlertLocked();">
+      <i class="ion-ios-help-empty"></i>
+    </button>
+  </ion-content>
+</ion-view>

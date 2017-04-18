@@ -1,0 +1,44 @@
+<ion-item class="thought-item fadein"
+          data-id="{{ thought.id }}"
+          ng-if="thought">
+
+  <div ng-if="selectedThought && isSelectedThought(thought)"
+       class="item-unselected fadein"
+       ng-click="deselectThought()"></div>
+
+  <div ng-if="selectedThought && !isSelectedThought(thought)"
+       class="item-selected fadein"
+       ng-click="deselectThought()"></div>
+
+
+  <div class="content-part content-main">
+
+    <p ng-bind="thought.content"></p>
+
+    <div class="details">
+      <!--i class="date"
+         ng-class="'intensity-color-text-' + thought.intensity"
+         ng-bind="thought.createdAt | dateMindFormat"></i-->
+      <i class="date"
+         ng-class="thought.mood"
+         ng-bind="thought.createdAt | dateMindFormat"></i>
+      <span class="{{ getNotAloneValue(thought) ? 'not-alone-active' : 'not-alone' }} fadein">
+        <i class="icon-heart"></i>
+        <span class="number"
+              ng-class="{ 'gray' : !getNotAloneValue(thought) }"
+              ng-bind="getNotAloneValue(thought) || '0'"></span>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="content-part content-right">
+    <div class="t-row mood">
+      <div class="row-content">
+        <div class="img-wrapper">
+          <img ng-src="img/moods/new/{{ isCorrectMood(thought.mood) ? thought.mood : 'neutral' }}-{{ thought.intensity || '1' }}.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-item>

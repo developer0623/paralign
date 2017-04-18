@@ -1,0 +1,182 @@
+.icon-close {
+  background: url("../img/icon_close.png") no-repeat;
+  background-size: 100%;
+  width: 8rem;
+  height: 4.5rem;
+}
+
+.icon-x {
+  background: url("../img/icon-delete.png") no-repeat;
+  background-size: 100%;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  margin-top: -0.4rem;
+  vertical-align: middle;
+  opacity: 0.56;
+}
+
+.icon-x-white {
+  background: url("../img/icon-delete-white.png") no-repeat;
+  background-size: 100%;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-block;
+  margin-top: -0.4rem;
+  vertical-align: middle;
+  opacity: 1;
+}
+
+.icon-close-ice {
+  /* background: url("../img/icon_close_ice.png") no-repeat; */
+  background: url("../img/icon-delete.png") no-repeat;
+  background-size: 100%;
+  /* width: 28px; */
+  /* height: 28px; */
+  display: inline-block;
+  margin-top: -4px;
+  vertical-align: middle;
+  width: 1.8rem;
+  height: 1.8rem;
+  opacity: 0.56;
+}
+
+.icon-info-ice {
+  /* background: url("../img/icon_info_ice.png") no-repeat; */
+  background: url("../img/icon-info-black.png") no-repeat;
+  background-size: 100%;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  margin-top: -4px;
+  vertical-align: middle;
+  opacity: 0.56;
+}
+
+.icon-info-black {
+  /* background: url("../img/icon_info_black.png") no-repeat; */
+  background: url("../img/icon-info-black.png") no-repeat;
+  background-size: 100%;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-block;
+  margin-top: -0.4rem;
+  vertical-align: middle;
+}
+
+.icon-google {
+  background: url("../img/icon_google.png") no-repeat;
+  background-size: 100%;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: inline-block;
+}
+
+.icon-email {
+  background: url("../img/icon_email.png") no-repeat;
+  background-size: 100%;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: inline-block;
+}
+
+.icon-facebook {
+  background: url("../img/icon_facebook.png") no-repeat;
+  background-size: 100%;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: inline-block;
+}
+
+.icon-close-sun {
+  /* background: url("../img/icon_close_sun.png") no-repeat; */
+  background: url("../img/icon-delete.png") no-repeat;
+  background-size: 100%;
+  /* width: 28px; */
+  /* height: 28px; */
+  display: inline-block;
+  margin-top: -4px;
+  vertical-align: middle;
+  width: 1.8rem;
+  height: 1.8rem;
+  opacity: 0.56;
+}
+
+.icon-info-sun {
+  /* background: url("../img/icon_info_sun.png") no-repeat; */
+  background: url("../img/icon-info-black.png") no-repeat;
+  background-size: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  margin-top: -4px;
+  vertical-align: middle;
+  opacity: 0.56;
+}
+
+.icon-arrow-down-sun {
+  background: url("../img/icon_arrow_down_sun.png") no-repeat;
+  background-size: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-block;
+}
+
+.icon-arrow-flip {
+  background: url("../img/similarminds/icon_arrow_flip.png") no-repeat;
+  background-size: 100%;
+  width: 4rem;
+  height: 3rem;
+  display: inline-block;
+}
+
+.icon-funnel {
+  background: url("../img/icon_funnel.png") no-repeat;
+  background-size: 100%;
+  width: 2.3rem;
+  height: 2.8rem;
+  display: block;
+}
+
+.icon-lock {
+  background: url("../img/icon_lock.png") no-repeat;
+  background-size: 100%;
+  width: 2rem;
+  height: 2.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  top: -0.1rem;
+  position: relative;
+}
+
+.icon-yana {
+  background: url("../img/icon-yana.png") no-repeat;
+  background-size: 100%;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+}
+
+.icon-yana-red {
+  background: url("../img/similarminds/yana-inactive.png") no-repeat;
+  background-size: 100%;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-block;
+}
+
+.icon-yana-gray {
+  background: url("../img/icon_yana_gray.png") no-repeat;
+  background-size: 100%;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-block;
+}
+
+.icon-heart {
+  background: url("../img/heart-filled.png") no-repeat;
+  background-size: 100%;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+}

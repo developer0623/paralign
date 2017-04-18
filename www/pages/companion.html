@@ -1,0 +1,58 @@
+<ion-view id="companion"
+          title="Companion"
+          hide-back-button="true"
+          hide-nav-bar="false"
+          ng-init="setStyleHeaderBar()">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'" ng-click="$state.go('home')"></ng-include>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+  <div class="fake-header-bar"></div>
+
+  <ion-content class="has-header" has-header="true" scroll="false">
+    <ion-list>
+      <ion-item class="ice-diving"
+                ng-if="isSettingsAllow('guides', 'icediving')"
+                ng-click="$state.go('icedivingintro')">
+        <div class="img-wrapper">
+          <img src="img/icon_menu_icediving.png"/>
+        </div>
+        <div class="item-content">
+          <h3> Ice Diving </h3>
+          <p> Guide </p>
+          <i class="icon ion-chevron-right"></i>
+        </div>
+      </ion-item>
+
+      <ion-item class="sunshine-hill"
+                ng-if="isSettingsAllow('guides', 'sunshine')"
+                ng-click="$state.go('sunshineintro')">
+        <div class="img-wrapper">
+          <img src="img/icon_menu_sunshine.png"/>
+        </div>
+        <div class="item-content">
+          <h3> Sunshine Hill </h3>
+          <p> Meditation </p>
+          <i class="icon ion-chevron-right"></i>
+        </div>
+      </ion-item>
+
+      <ion-item class="calm-lake"
+                ng-if="isSettingsAllow('guides', 'calmlake')"
+                ng-click="$state.go('lakeintro')">
+        <div class="img-wrapper">
+          <img src="img/icon_menu_lake.png"/>
+        </div>
+        <div class="item-content">
+          <h3> Calm Lake </h3>
+          <p> Meditation </p>
+          <i class="icon ion-chevron-right"></i>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

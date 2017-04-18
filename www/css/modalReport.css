@@ -1,0 +1,64 @@
+#modal-report {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+#modal-report ion-content.has-footer {
+  bottom: auto;
+}
+
+#modal-report ion-footer-bar  {
+  height: 14.4rem;
+  padding: 0;
+  background: none;
+}
+
+#modal-report.chat-mode ion-footer-bar  {
+  /* height: 21rem; */
+}
+
+#modal-report ion-footer-bar ion-pane {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: none;
+}
+
+#modal-report ion-footer-bar ion-pane button {
+  height: 5.6rem;
+  display: inline-block;
+  width: calc(100% - 3.2rem);
+  margin: 0 0 1.6rem 0;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: none;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+#modal-report ion-footer-bar ion-pane button.btn-report {
+  background: #fff;
+  color: rgba(255, 106, 106, 1);
+}
+
+#modal-report ion-footer-bar ion-pane button.btn-cancel {
+  background: rgba(255, 106, 106, 1);
+  color: #fff;
+}
+
+.slide-in-down {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0); }
+
+.slide-in-down.ng-enter, .slide-in-down > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-down.ng-enter-active, .slide-in-down > .ng-enter-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slide-in-down.ng-leave, .slide-in-down > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }

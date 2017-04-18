@@ -1,0 +1,130 @@
+#connections {
+  background: #F8F8F8;
+}
+
+#connections ion-content .message-full-page h2 {
+  color: #82A172;
+}
+
+#connections ion-content ion-list .list {
+  padding: 0; /*0 1.5rem*/
+  background: #fff;
+}
+
+#connections ion-content ion-list ion-item {
+  display: table;
+  width: 100%;
+  height: 8rem;
+  /*padding: 1.6rem 0.8rem;*/
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px rgba(0,0,0,0.04);
+  margin: 0;
+  background: none;
+}
+
+#connections ion-content ion-list ion-item.selected h3 {
+  font-weight: bold;
+}
+
+#connections ion-content ion-list ion-item.activated {
+  background: inherit;
+}
+
+#connections ion-content ion-list ion-item.activated .item-content {
+  background: inherit;
+}
+
+#connections ion-content ion-list ion-item .img-wrapper {
+  display: table-cell;
+  width: 8rem;
+  margin: 0;
+  vertical-align: middle;
+  padding: 1.6rem;
+  /*
+  display: table-cell;
+  width: 7rem;
+  margin: 1.5rem;
+  vertical-align: middle;
+  */
+}
+
+#connections ion-content ion-list ion-item .img-wrapper img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+#connections ion-content ion-list ion-item .item-content {
+  padding: 0;
+  background: #fff;
+}
+
+#connections ion-content ion-list ion-item .item-info {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0; /* 0 0 0 1.5rem */
+  overflow: hidden;
+}
+
+#connections ion-content ion-list ion-item .item-info h3 {
+  font-family: ProximaNova-Semibold, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: rgba(255, 106, 106, 1);
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+#connections ion-content ion-list ion-item .item-info p {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: rgba(52, 52, 52, 1);
+  margin: 0;
+  width: 64vw;
+}
+
+#connections ion-content ion-list ion-item .item-info .icon-arrow-red {
+  background: url("../img/icon_arrow_red.png") no-repeat;
+  background-size: 100%;
+  width: 1.6rem;
+  height: 2.6rem;
+  display: block;
+  position: absolute;
+  right: 1.6rem;
+  top: calc(50% - 1.3rem); /*  1.3rem == (height) / 2  */
+}
+
+#connections ion-content ion-list ion-item .item-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  background-color: rgba(0,0,0,0.04);
+}
+
+#connections ion-content ion-list ion-item .item-options .button.button-light {
+  border-color: transparent;
+  background-color: transparent;
+  color: rgba(0,0,0,0.56);
+  padding: 0 2.4rem;
+}
+
+#connections ion-content ion-list ion-item .item-options .button.button-light:hover {
+  background-color: transparent;
+  color: rgba(0,0,0,0.8);
+}
+
+#connections ion-content ion-list ion-item .item-options .ion-android-lock.button.button-light {
+  color: rgba(0,0,0,0.8);
+}
+
+#connections .item-loader {
+  height: auto;
+}
+
+#connections .message-full-page p {
+  padding: 0 3.5rem;
+}

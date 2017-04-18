@@ -1,0 +1,165 @@
+<ion-content scroll="false" class="tmplt-mood">
+  <h2 class="title fadein"> What's your mood? </h2>
+
+  <div class="moodbox fadein">
+    <div class="row">
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="happy {{moods['happy']}}" ng-click="setMoodType('happy');">
+          <div class="icon">
+            <img src="img/moods/new/happy.png">
+            <span class="moodName">
+              <h2>Happy</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="peaceful {{moods['peaceful']}}" ng-click="setMoodType('peaceful');">
+          <div class="icon">
+            <img src="img/moods/new/peaceful.png">
+            <span class="moodName">
+              <h2>Peaceful</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="sad {{moods['sad']}}" ng-click="setMoodType('sad');">
+          <div class="icon">
+            <img src="img/moods/new/sad.png">
+            <span class="moodName">
+              <h2>Sad</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="mad {{moods['mad']}}" ng-click="setMoodType('mad');">
+          <div class="icon">
+            <img src="img/moods/new/mad.png">
+            <span class="moodName">
+              <h2>Mad</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="nervous {{moods['nervous']}}" ng-click="setMoodType('nervous');">
+          <div class="icon">
+            <img src="img/moods/new/nervous.png">
+            <span class="moodName">
+              <h2>Nervous</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-33">
+        <ion-radio icon="false" class="neutral {{moods['neutral']}}" ng-click="setMoodType('neutral');">
+          <div class="icon">
+            <img src="img/moods/new/neutral.png">
+            <span class="moodName">
+              <h2>Neutral</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+    </div>
+
+  </div>
+
+  <h2 class="title fadein"> How intense is your mood? </h2>
+
+  <div class="intense-rating fadein">
+    <div class="row">
+
+      <div class="col col-20">
+        <ion-radio ng-repeat="val in [1]"
+                icon="false"
+                ng-click="setMoodIntense(val);">
+          <div class="icon">
+            <img class="{{thought.mood}}"
+                 src="img/moods/new/intensity/{{ ::val  }}.png">
+            <span class="moodIntensity {{intensity[val]}}">
+              <h2>{{ ::val  }}</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-20">
+        <ion-radio ng-repeat="val in [2]"
+                   icon="false"
+                   ng-click="setMoodIntense(val);">
+          <div class="icon">
+            <img class="{{thought.mood}}"
+                 src="img/moods/new/intensity/{{ ::val  }}.png">
+            <span class="moodIntensity {{intensity[val]}}">
+              <h2>{{ ::val  }}</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-20">
+        <ion-radio ng-repeat="val in [3]"
+                icon="false"
+                ng-click="setMoodIntense(val);">
+          <div class="icon">
+            <img class="{{thought.mood}}"
+                 src="img/moods/new/intensity/{{ ::val  }}.png">
+            <span class="moodIntensity {{intensity[val]}}">
+              <h2>{{ ::val  }}</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-20">
+        <ion-radio ng-repeat="val in [4]"
+                icon="false"
+                ng-click="setMoodIntense(val);">
+          <div class="icon">
+            <img class="{{thought.mood}}"
+                 src="img/moods/new/intensity/{{ ::val  }}.png">
+            <span class="moodIntensity {{intensity[val]}}">
+              <h2>{{ ::val  }}</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+      <div class="col col-20">
+        <ion-radio ng-repeat="val in [5]"
+                icon="false"
+                ng-click="setMoodIntense(val);">
+          <div class="icon">
+            <img class="{{thought.mood}}"
+                 src="img/moods/new/intensity/{{ ::val  }}.png">
+            <span class="moodIntensity {{intensity[val]}}">
+              <h2>{{ ::val  }}</h2>
+            </span>
+          </div>
+        </ion-radio>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="action-button fadein"
+          ng-disabled="!thought || !thought.content || !thought.mood"
+          ng-click="nextStep()">
+    <span>Done</span>
+  </button>
+
+</ion-content>

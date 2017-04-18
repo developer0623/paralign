@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width, height=device-height">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="
+          default-src
+          'self'
+          data:
+          gap:
+          'unsafe-eval'
+          ;
+
+          style-src
+          'self'
+          'unsafe-inline'
+          ;
+
+          script-src
+          'self'
+          'unsafe-inline'
+          'unsafe-eval'
+          http://192.168.88.80:35729/livereload.js
+          http://192.168.88.80:35730/livereload.js
+          http://file/socket.io/
+
+          http://50.18.178.57:*/
+          http://50.18.178.57:*/__getcookie
+
+          http://192.168.88.80:*/
+          http://192.168.88.80:*/__getcookie
+
+          http://50.97.233.90:*/
+          http://50.97.233.90:*/__getcookie
+          ;
+
+          connect-src
+          'self'
+          http://api.mixpanel.com/track/
+          http://api.mixpanel.com/decide/
+          http://api.mixpanel.com/engage/
+          ws://192.168.88.80:35729/livereload
+          ws://192.168.88.80:35730/livereload
+          http://file/socket.io/
+
+          http://50.18.178.57:*/
+          ws://50.18.178.57:*/
+
+          http://192.168.88.80:*/
+          ws://192.168.88.80:*/
+
+          http://50.97.233.90:*/
+          ws://50.97.233.90:*/
+          ;"/>
+
+
+    <title></title>
+
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="lib/ion-md-input/css/ion-md-input.min.css" rel="stylesheet">
+    <link href="lib/ionic-ion-tinder-cards/ionic.tdcards.css" rel="stylesheet">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/vendor/animate.min.css" rel="stylesheet">
+    <link href="lib/angularjs-slider/dist/rzslider.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- styles:css -->
+    <link rel="stylesheet" href="css/ageSlider.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/coach.css">
+    <link rel="stylesheet" href="css/connections.css">
+    <link rel="stylesheet" href="css/contactUs.css">
+    <link rel="stylesheet" href="css/directives.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/iceDiving.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/lake.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/modalInfo.css">
+    <link rel="stylesheet" href="css/modalReport.css">
+    <link rel="stylesheet" href="css/myMinds.css">
+    <link rel="stylesheet" href="css/newThought.css">
+    <link rel="stylesheet" href="css/sideMenu.css">
+    <link rel="stylesheet" href="css/similarMinds.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sunshine.css">
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="css/tutorial.css">
+    <link rel="stylesheet" href="css/wonderingMinds.css">
+    <!-- endinject -->
+
+
+
+
+    <!-- Config -->
+    <script src="js/ENV.js"></script>
+    <script src="js/global/global.config.socket.js"></script>
+    <script src="js/global/global.config.mixpanel.js"></script>
+    <script src="js/global/helpers.js"></script>
+
+    <!-- End Config -->
+
+
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="lib/sails.io.js/dist/sails.io.js"></script>
+    <script src="lib/angular-sails/dist/angular-sails.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="lib/angular-elastic/elastic.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/angular-svg-round-progressbar/build/roundProgress.min.js"></script>
+    <script src="lib/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="lib/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="lib/mixpanel/mixpanel-jslib-snippet.min.js"></script>
+    <script src="lib/angular-mixpanel/dist/angular-mixpanel.min.js"></script>
+    <script src="lib/jqlite/jqlite.js"></script>
+    <script src="lib/watermarkjs/dist/watermark.js"></script>
+    <script src="lib/angular-scroll/angular-scroll.js"></script>
+    <!--<script src="lib/jquery/dist/jquery.js"></script>-->
+    <!--<script>-->
+      <!--window.$ = window.jQuery = angular.element;-->
+      <!--window.$.fn = window.$.prototype;-->
+    <!--</script>-->
+    <script src="js/vendor/collide.js"></script>
+    <script src="js/vendor/scrollglue.js"></script>
+    <script src="js/vendor/ng-cordova-InAppBrowser.patch.js"></script>
+    <script src="js/vendor/angular-ios9-uiwebview.patch.js"></script>
+
+
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+    <!-- <script src="cordova.js"></script> -->
+
+
+
+    <!-- ng-app:js -->
+    <script src="js/app.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/app.routes.js"></script>
+    <!-- endinject -->
+
+
+    <!-- ng-modules:js -->
+    <script src="js/directives/attachBottomIfKeyboardOpen.js"></script>
+    <script src="js/directives/buttonSocketConnection.js"></script>
+    <script src="js/directives/canDragMenu.js"></script>
+    <script src="js/directives/fadein.js"></script>
+    <script src="js/directives/focusMe.js"></script>
+    <script src="js/directives/listItemLoader.js"></script>
+    <script src="js/directives/menuFader.js"></script>
+    <script src="js/directives/menuCloseOnClick.js"></script>
+    <script src="js/directives/newThoughtPen.js"></script>
+    <script src="js/directives/ngEnter.js"></script>
+    <script src="js/directives/noDragLeft.js"></script>
+    <script src="js/directives/noDragRight.js"></script>
+    <script src="js/directives/setInvisible.js"></script>
+    <script src="js/directives/screenShot.js"></script>
+    <script src="js/factories/$localStorage.js"></script>
+    <script src="js/factories/$serverConsole.js"></script>
+    <script src="js/factories/ResolveWait.js"></script>
+    <script src="js/filters/dateMindFormat.js"></script>
+    <script src="js/resources/Chat.js"></script>
+    <script src="js/resources/Feedback.js"></script>
+    <script src="js/resources/Guide.js"></script>
+    <script src="js/resources/ListEvents.js"></script>
+    <script src="js/resources/NotAlone.js"></script>
+    <script src="js/resources/Report.js"></script>
+    <script src="js/resources/Settings.js"></script>
+    <script src="js/resources/Thought.js"></script>
+    <script src="js/resources/Transaction.js"></script>
+    <script src="js/resources/User.js"></script>
+    <script src="js/services/AuthService.js"></script>
+    <script src="js/services/ChatService.js"></script>
+    <script src="js/services/FeedbackService.js"></script>
+    <script src="js/services/GoogleAnalytics.js"></script>
+    <script src="js/services/MixpanelService.js"></script>
+    <script src="js/services/NotificationService.js"></script>
+    <script src="js/services/SessionService.js"></script>
+    <script src="js/services/SettingsService.js"></script>
+    <script src="js/services/SocketService.js"></script>
+    <script src="js/services/StoreService.js"></script>
+    <script src="js/services/ThoughtService.js"></script>
+    <script src="js/services/ScreenShot.js"></script>
+    <script src="js/global/SocialSharing.js"></script>
+    <script src="js/global/html2canvas.js"></script>
+
+    <!-- endinject -->
+
+
+    <!-- ng-controllers:js -->
+    <script src="js/controllers/ChatCtrl.js"></script>
+    <script src="js/controllers/CompanionCtrl.js"></script>
+    <script src="js/controllers/ConnectionsCtrl.js"></script>
+    <script src="js/controllers/ContactUsCtrl.js"></script>
+    <script src="js/controllers/IceDivingCtrl.js"></script>
+    <script src="js/controllers/LakeCtrl.js"></script>
+    <script src="js/controllers/LoginCtrl.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/MainNavigationCtrl.js"></script>
+    <script src="js/controllers/MyMindsCtrl.js"></script>
+    <script src="js/controllers/NewThoughtCtrl.js"></script>
+    <script src="js/controllers/HomeCtrl.js"></script>
+    <script src="js/controllers/SimilarMindsCtrl.js"></script>
+    <script src="js/controllers/SunshineCtrl.js"></script>
+    <script src="js/controllers/TutorialCtrl.js"></script>
+    <script src="js/controllers/WonderingMindsCtrl.js"></script>
+    <!-- endinject -->
+
+  </head>
+
+  <body ng-app="ParalignApp" ng-controller="MainCtrl" ng-cloak="">
+
+    <ion-nav-view></ion-nav-view>
+
+  </body>
+</html>

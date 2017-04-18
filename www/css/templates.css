@@ -1,0 +1,523 @@
+.tmplt-mindText {
+  padding-top: 8%;
+}
+
+
+.tmplt-mindText textarea {
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  color: rgba(70, 70, 70,1);
+  display: inline-block;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  background: transparent;
+  border-radius: 0;
+  resize: none;
+  width: 80%;
+  overflow-y: scroll;
+  height: 40%;
+  max-height: 13rem;
+}
+
+.tmplt-mindText textarea::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+.tmplt-mindText .thought-limit {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  color: #ADADAD;
+  margin-right: 2.4rem;
+  text-align: right;
+  float: right;
+}
+
+.tmplt-mindText .thought-limit.danger {
+  color: #FF6A6A !important;
+}
+
+.tmplt-mindText .action-button {
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.2rem;
+  margin: 0.4rem auto;
+  display: inline-block;
+  line-height: inherit;
+  text-align: center;
+  background: #FF6A6A; /* rgba(232, 75, 76, 1) */
+  text-decoration: none;
+  width: 64%;
+  height: 5.6rem;
+  position: absolute;
+  bottom: 12rem;
+  left: 18%;
+
+  /* GUS */
+  border-radius: 0.2rem;
+  border: none;
+  font: 1.8rem/2.4rem ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  padding: 1.6rem;
+  bottom: 2.4rem;
+  width: calc(100% - 4.8rem);
+  left: 2.4rem;
+  right: 2.4rem;
+}
+
+.tmplt-mindText .action-button span {
+  font: 1.8rem/2.4rem ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+}
+
+.tmplt-mindText .action-button i {
+  margin-left: 0.4rem;
+}
+
+.tmplt-mindText .action-button i,
+.tmplt-mindText .action-button i::before {
+  font: 1.8rem/2.4rem ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+}
+
+.tmplt-mindText .clear-footer-row {
+  clear: both;
+  display: block;
+  width: 11rem;
+}
+
+
+
+.tmplt-moodType {
+  padding-top: 8%;
+}
+
+.tmplt-moodType > h2 {
+  display: block;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: rgb(144, 126, 95);
+  margin-bottom: 4%;
+}
+
+.tmplt-moodType .moodbox {
+  display: inline-block;
+  margin-top: 1.6rem;
+  width: 72%;
+}
+
+.tmplt-moodType .moodbox .row .col {
+  padding: 0 4%;
+  margin-bottom: 4%;
+}
+
+.tmplt-moodType .moodbox .row .col .holdicon .facebg {
+  background-color: transparent;
+  border: none;
+  background: none;
+}
+
+.tmplt-moodType .moodbox .row .col .holdicon .item-radio.activated .item-content {
+  background-color: rgb(254, 234, 189);
+}
+
+.tmplt-moodType .moodbox .row .col .holdicon .item-radio .item-content {
+  background-color: transparent;
+  padding: 0;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tmplt-moodType .moodbox .row .col .holdicon .item-radio .item-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.tmplt-moodType .moodbox .row .col .holdicon h2 {
+  margin: 0;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: rgb(144, 126, 95);
+  margin-bottom: 1.6rem;
+}
+
+
+.tmplt-moodIntense {
+  padding-top: 8%;
+}
+
+.tmplt-moodIntense > h2 {
+  display: block;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.8rem;
+  color: rgb(144, 126, 95);
+  margin-bottom: 4%;
+}
+
+.tmplt-moodIntense .intense-rating {
+  width: 16%;
+  margin: 8% auto;
+  text-align: center;
+}
+
+.tmplt-moodIntense .intense-rating .item-radio {
+  text-align: center;
+  padding: 0;
+  border: none;
+  color: #fff;
+}
+
+.tmplt-moodIntense .intense-rating .item-radio:first-child {
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.tmplt-moodIntense .intense-rating .item-radio:last-child {
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.tmplt-moodIntense .intense-rating .item-radio .item-content {
+  padding: 2rem;
+  background-color: inherit;
+}
+
+.tmplt-moodIntense .intense-rating .item-radio.activated .item-content {
+  background-color: rgb(254, 234, 189);
+}
+
+.tmplt-moodIntense .intense-rating .item-radio .item-content span {
+  font-family: OpenSans, sans-serif;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+}
+
+
+.tmplt-btn-back {
+  padding: 0;
+  border: 1px solid transparent !important;
+}
+
+/* .tmplt-btn-back:before {
+  padding: 0 2px 1px 2px;
+}*/
+
+
+/* New Thought Funnel CSS */
+.tmplt-mood {
+  padding: 1.6rem;
+}
+
+.tmplt-mood h2.title {
+  text-align: left;
+  font: 1.8rem/2.4rem ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  padding: 0rem 0.8rem;
+  margin: 0;
+  color: rgba(0,0,0,0.8);
+}
+
+.tmplt-mood .moodbox {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  width: calc(100% - 0rem);
+}
+
+.tmplt-mood .moodbox .row .col {
+  padding: 4%;
+  margin-bottom: 0rem;
+}
+
+/* .tmplt-mood .moodbox .row .col.col-33:first-child {
+  margin-left: -1rem;
+}
+
+.tmplt-mood .moodbox .row .col.col-33:last-child {
+  margin-right: -1rem;
+} */
+
+.tmplt-mood .moodbox label.item.item-radio {
+  background: #FAFAFA;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0,0,0,0.24);
+  margin: 0;
+  min-width: 7.2rem;
+  width: 100%;
+  padding: 0;
+  border: none;
+  height: auto;
+}
+
+.tmplt-mood .moodbox label.item.item-radio .radio-content .item-content {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tmplt-mood .moodbox label.item.item-radio .radio-content .item-content .icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 1.6rem;
+  background: #FDFDFD;
+}
+
+.tmplt-mood .moodbox label.item.item-radio .radio-content .item-content .icon span.moodName {
+  width: auto;
+  height: 3.2rem;
+  display: inline-block;
+  background: #FFF;
+  color: inherit;
+  border-radius: 0 0 0.2rem 0.2rem;
+  min-width: 100%;
+  vertical-align: middle;
+}
+
+.tmplt-mood .moodbox label.item.item-radio .radio-content .item-content .icon span.moodName h2 {
+  margin: 0;
+  font: 1.6rem/3.2rem ProximaNova-Regular, OpenSans, sans-serif;
+  color: rgba(0,0,0,0.72);
+  margin-bottom: 0;
+}
+
+/******* Mood Colors *******/
+
+/* Happy */
+.tmplt-mood .moodbox label.happy.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.happy.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.happy,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.happy,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.happy,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.happy,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.happy h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.happy h2  {
+  background: #F68200 !important;
+  color: #FFF !important;
+} /* #E47F0D */
+
+/* Peaceful */
+.tmplt-mood .moodbox label.peaceful.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.peaceful.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.peaceful,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.peaceful,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.peaceful,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.peaceful,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.peaceful h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.peaceful h2 {
+  background: #00B0DC !important;
+  color: #FFF !important;
+} /* #179EC0 */
+
+/* Sad */
+.tmplt-mood .moodbox label.sad.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.sad.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.sad,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.sad,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.sad,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.sad,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.sad h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.sad h2 {
+  background: #724DAC !important;
+  color: #FFF !important;
+} /* #8173AC | #68579B */
+
+/* Mad */
+.tmplt-mood .moodbox label.mad.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.mad.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.mad,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.mad,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.mad,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.mad,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.mad h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.mad h2 {
+  background: #E24B58 !important;
+  color: #FFF !important;
+} /* #F34D5C #D64A57 */
+
+/* Nervous */
+.tmplt-mood .moodbox label.nervous.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.nervous.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.nervous,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.nervous,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.nervous,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.nervous,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.nervous h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.nervous h2 {
+  background: #85B23F !important;
+  color: #FFF !important;
+} /* #94CB40 */
+
+/* Neutral */
+.tmplt-mood .moodbox label.neutral.item.item-radio.activated1 .radio-content .item-content .icon span.moodName,
+.tmplt-mood .moodbox label.neutral.item.item-radio.activated1 .radio-content .item-content .icon span.moodName h2,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img.neutral,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon img.neutral,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.neutral,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.neutral,
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity.neutral h2,
+.tmplt-mood .intense-rating label.item.item-radio.activated1 .radio-content .item-content .icon span.moodIntensity.neutral h2 {
+  background: #556F7C !important;
+  color: #FFF !important;
+} /* #56666E | #536C78 */
+
+
+.tmplt-mood .moodbox .holdicon {
+  background: #FAFAFA;
+  border-radius: 0.2rem;
+  padding: 1.6rem 0.8rem 0.8rem;
+  margin: 0;
+  min-width: 7.2rem;
+  width: 100%;
+  padding: 0;
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+          box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+}
+
+.tmplt-mood .moodbox .holdicon span.moodName {
+  width: 100%;
+  height: 3.2rem;
+  display: inline-block;
+  background: #FFF;
+  color: #FFF !important;
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+
+.tmplt-mood .moodbox .row .col .holdicon .facebg {
+  background-color: transparent;
+  border: none;
+  background: none;
+}
+
+.tmplt-mood .moodbox .row .col .holdicon .item-radio.activated .item-content {
+  background-color: rgb(254, 234, 189);
+}
+
+.tmplt-mood .moodbox .row .col .holdicon .item-radio .item-content {
+  background-color: transparent;
+  padding: 0;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.8rem 0 0.6rem;
+}
+
+.tmplt-mood .moodbox .row .col .holdicon .item-radio .item-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.tmplt-mood .moodbox .row .col .holdicon h2 {
+  margin: 0;
+  font: 1.6rem/3.2rem ProximaNova-Regular, OpenSans, sans-serif;
+  color: rgba(0,0,0,0.72);
+  margin-bottom: 0;
+}
+
+/* INTENSITY */
+.tmplt-mood .intense-rating {
+  width: calc(100% - 0.4rem);
+  margin: 4% 0.2rem;
+  text-align: center;
+}
+
+.tmplt-mood .intense-rating label.item.item-radio {
+  text-align: center;
+  padding: 0;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+          box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+}
+
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content {
+  padding: 0rem;
+  background-color: inherit;
+}
+
+.tmplt-mood .intense-rating .item-radio.activated .item-content {
+  background-color: rgb(254, 234, 189);
+}
+
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0rem;
+  margin: 0rem;
+  background: #56666E;
+}
+
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity {
+  width: auto;
+  height: 3.2rem;
+  display: inline-block;
+  background: #FFF;
+  color: inherit;
+  border-radius: 0 0 0.2rem 0.2rem;
+  min-width: 100%;
+  vertical-align: middle;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+}
+
+.tmplt-mood .intense-rating label.item.item-radio .radio-content .item-content .icon span.moodIntensity h2 {
+  margin: 0;
+  font: 1.6rem/3.2rem ProximaNova-Regular, OpenSans, sans-serif;
+  color: rgba(0,0,0,0.72);
+  margin-bottom: 0;
+}
+
+/* Temporary color settings */
+.tmplt-mood .intense-rating .intensity-color- {
+  background: rgba(120, 194, 175, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-0 {
+  background: rgba(120, 194, 175, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-1 {
+  background: rgba(131, 163, 115, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-2 {
+  background: rgba(251, 169, 62, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-3 {
+  background: rgba(246, 142, 62, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-4 {
+  background: rgba(242, 104, 51, 1) !important;
+}
+.tmplt-mood .intense-rating .intensity-color-5 {
+  background: rgba(238, 87, 88, 1) !important;
+}
+
+.tmplt-mood button.action-button {
+  background: #FF6A6A;
+  color: #fff;
+  border-radius: 0.2rem;
+  border: none;
+  font: 1.8rem/2.4rem ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  padding: 1.6rem;
+  bottom: 0.8rem;
+  width: calc(100% - 1rem);
+  left: 0.5rem;
+  right: 0.5rem;
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+          box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+  -webkit-transition: box-shadow 280ms ease-out, background 280ms ease-out, color 280ms ease-out;
+          transition: box-shadow 280ms ease-out, background 280ms ease-out, color 280ms ease-out;
+}
+
+.tmplt-mood button.action-button:disabled,
+.tmplt-mood button.action-button.disabled {
+  background: white !important;
+  color: rgba(0,0,0,0.4) !important;
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.12);
+          box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.12);
+}

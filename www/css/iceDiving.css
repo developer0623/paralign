@@ -1,0 +1,181 @@
+ion-nav-bar.custom-style-iceDiving ion-header-bar {
+  background-color: rgba(253, 249, 231, 1) !important;
+}
+
+ion-nav-bar.custom-style-iceDiving ion-header-bar .title {
+  /* color: rgba(104, 167, 178, 1) !important; */
+  /* color: rgba(0,0,0,0.56) !important; */
+  color: transparent !important;
+}
+
+
+#iceDiving ion-content.intro {
+  background: url(../img/icediving/iceDiving-bg.png) no-repeat 0px 0px;
+  background-size: cover;
+  text-align: center;
+}
+
+#iceDiving ion-content.intro {
+  top: 0 !important;
+}
+
+#iceDiving ion-content {
+  background: rgba(253, 249, 231, 1);
+  text-align: center;
+}
+
+#iceDiving ion-content > h1 {
+  font-family: LondrinaSolid, sans-serif;
+  font-size: 7.2rem;
+  line-height: 9.6rem;
+  font-weight: bold;
+  margin: 12vh 0 0 0;
+  color: #fff;
+}
+
+#iceDiving ion-content > h4 {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  /* color: #46a890; */
+  color: #08a6b2;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#iceDiving ion-content.intro .slider {
+  margin-top: 2rem;
+}
+
+#iceDiving ion-content.intro .slider .slider-slides {
+  height: 14rem;
+}
+
+#iceDiving ion-content.intro .slider .slider-pager {
+  bottom: 2.4rem;
+  height: 2.4rem;
+}
+
+#iceDiving ion-content.intro .slider .slider-slides .slide-content {
+  /* color: #46a890; */
+  color: #08a6b2;
+  font: 1.6rem/2.4rem ProximaNova-Regular, OpenSans, sans-serif;
+  margin: 0 6%;
+}
+
+#iceDiving ion-content .slider .slider-pager .slider-pager-page .ion-pager-override {
+  background: #08a6b2; /* #46a890 */
+  border: none;
+}
+
+#iceDiving ion-content .slider .slider-pager .slider-pager-page.active .ion-pager-override {
+  background: transparent;
+  border: 4px solid #08a6b2; /* #46a890 */
+}
+
+#iceDiving ion-content.intro .slider .slider-pager .slider-pager-page {
+  /* color: rgba(121, 193, 173, 1); */
+  font-size: 1.8rem;
+  margin: 0 0.6rem;
+}
+
+#iceDiving ion-content.intro .slider .slider-pager .slider-pager-page.active {
+  /* color: rgba(70, 168, 144, 1); */
+}
+
+#iceDiving ion-content.intro .action-button {
+  position: absolute;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.08);
+  background: #FF6A6A; /* #FF7979 */
+  color: #fff;
+  font: 1.6rem/2rem ProximaNova-Regular, OpenSans, sans-serif;
+  padding: 1.6rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 64%;
+  left: 18%;
+  bottom: 12%;
+}
+
+
+
+/************************
+  Guide slides
+************************/
+
+#iceDiving ion-content.guide-slides {
+
+}
+
+#iceDiving ion-content.guide-slides .slider {
+  height: 100%;
+}
+
+#iceDiving ion-content.guide-slides .slider ion-slide {
+  padding: 5vh;
+}
+
+#iceDiving ion-content.guide-slides .slider ion-slide h1 {
+  color: #08a6b2;
+  font-family: OpenSans-Bold, sans-serif;
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  margin-bottom: 4vh;
+}
+
+@media screen and (max-width: 320px) {
+  #iceDiving ion-content.guide-slides .slider ion-slide h1 {
+    font-size: 3rem;
+  }
+}
+
+#iceDiving ion-content.guide-slides .slider ion-slide img {
+  height: 40vh;
+}
+
+#iceDiving ion-content.guide-slides .slider ion-slide p {
+  color: #08a6b2;
+  font: 2.4rem/3.2rem ProximaNova-Regular, OpenSans, sans-serif;
+  margin: 3.2rem 0 0 0;
+  padding: 0 1rem;
+}
+
+#iceDiving ion-content.guide-slides .slider ion-slide p.action-button {
+  border: none;
+  box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.6rem;
+  display: inline-block;
+  line-height: normal;
+  text-align: center;
+  background: #08a6b2; /* rgba(232, 75, 76,1) */
+  text-decoration: none;
+  width: 72%;
+  font: 1.6rem/2.4rem ProximaNova-Regular, OpenSans, sans-serif;
+}
+
+
+#iceDiving ion-content.guide-slides  .slider .slider-pager {
+  bottom: 10%;
+  height: 2.4rem;
+}
+
+#iceDiving ion-content.guide-slides  .slider .slider-pager .slider-pager-page {
+  color: rgba(178, 213, 203, 1);
+  font-size: 1.8rem;
+  margin: 0 0.6rem;
+}
+
+#iceDiving ion-content.guide-slides  .slider .slider-pager .slider-pager-page.active {
+  color: rgba(111, 203, 208, 1);
+}
+
+/************************
+  End Guide slides
+************************/

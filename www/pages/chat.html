@@ -1,0 +1,114 @@
+<ion-view title="Chat"
+          id="chat"
+          data-id="{{ CurrentChat.id }}"
+          hide-back-button="true"
+          hide-nav-bar="false">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'"
+                ng-click="goBack();">
+    </ng-include>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button-socket-connection></button-socket-connection>
+
+    <button class="button button-icon button-clear"
+            ng-click="reportModal(); trackEvent('chatmenu');">
+      <i class="button-icon icon button button-clear ion-android-more-vertical"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+  <ion-content has-bouncing="true"
+               class="content"
+               scroll="false"
+               attach-bottom-if-keyboard-open>
+
+    <ion-scroll delegate-handle="chatPageHandle" direction="y">
+      <div>
+        <div class="log fadein" ng-if="countUsers.value > 1"> There are {{ countUsers.value }} participants </div>
+        <div class="log fadein" ng-if="countUsers.value <= 1"> There's 1 participant </div>
+        <div class="log fadein" ng-if="!chatPrivate && nickname"> You are commenting as "{{ nickname }}" </div>
+      </div>
+
+      <div ng-repeat="message in messages track by $index"
+           class="message-wrapper disable-user-behavior fadein"
+           ng-if="message && message.content"
+           ng-class="::{ 'small-margin' : isSameAuthorMessage(message, $index - 1) }">
+
+        <div ng-if="message.type === 'info'"
+             class="log"
+             ng-bind="message.content"></div>
+
+        <div ng-if="!message.type"
+             class="chat-bubble"
+             ng-class="::{ 'right': isMyMessage(message),
+                           'left' : !isMyMessage(message)}">
+
+          <div class="nickname"
+               ng-if="!chatPrivate && !isSameAuthorMessage(message, $index - 1)"
+               ng-bind="isMyMessage(message) ? 'You:' : getUserNickname(message.user) + ':'">
+          </div>
+
+          <div class="content-container">
+            <div class="triangle"></div>
+            <div class="content">
+              <div class="message" ng-bind="::message.content"></div>
+              <div class="message-detail" ng-bind="::message.createdAt | date : 'H:mm a'"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cf"></div>
+      </div>
+
+
+      <div ng-if="typingUsers && typingUsers.length"
+           class="message-wrapper disable-user-behavior fadein">
+        <div class="log fadein"
+             ng-repeat="nick in typingUsers">
+          User {{ nick }} types ...
+        </div>
+      </div>
+
+      <div ng-if="isPullingMessages"
+           class="message-wrapper disable-user-behavior fadein">
+        <div class="log fadein">
+          <ion-spinner icon="dots"></ion-spinner>
+        </div>
+      </div>
+
+      <div class="clear-row"></div>
+    </ion-scroll>
+  </ion-content>
+
+
+  <ion-footer-bar>
+    <div class="form-message" attach-bottom-if-keyboard-open>
+      <div class="item item-input-inset light-grey">
+        <label  class="item-input-wrapper line-light-grey nopadtop">
+          <textarea ng-model="message"
+                    value=""
+                    ng-enter="sendMessage()"
+                    ng-change="updateTyping()"
+                    placeholder="Send Message"
+                    minlength="1"
+                    maxlength="500"
+                    rows="1"
+                    msd-elastic
+                    style="height: 36px"></textarea>
+          <!--i class="ion-ios-chatbubble"></i-->
+        </label>
+
+        <div class="btn-send">
+          <button class="button button-clear"
+                  ng-click="sendMessage(); trackEvent('chatmessage');">
+            <i class="ion-android-send"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

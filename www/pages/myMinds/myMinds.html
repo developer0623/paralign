@@ -1,0 +1,42 @@
+<ion-view id="myMinds"
+          title="{{ currentTemplate == 'cluster' ? 'Cluster' : 'My Mind' }}"
+          hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <ng-include ng-if="currentTemplate == 'list'"
+                src="'pages/templates/button-back.html'"
+                ng-click="isCaseToGoHome() ? $state.go('home') : goBack();">
+    </ng-include>
+
+    <ng-include ng-if="currentTemplate == 'cluster'"
+                src="'pages/templates/button-back.html'"
+                ng-click="switchModeTo('list')">
+    </ng-include>
+  </ion-nav-buttons>
+
+
+  <ion-content class=""
+               scroll-y="true"
+               delegate-handle="myminds-scroll"
+               ng-click="selectedThought ? deselectThought() : ''">
+
+    <list-item-loader is-hide="!isFirstLoading" duration="500" delay="0.3"></list-item-loader>
+
+    <ng-include ng-class="{ 'transition-left' : !isFirstLoading }"
+                ng-if="pageTemplate && (!isCaseEmptyList() || !isCaseEmptyClusters())"
+                src="pageTemplate"></ng-include>
+
+    <div class="message-full-page post-thought-msg fadein"
+         ng-if="!isFirstLoading && isCaseEmptyList() && isCaseEmptyClusters()">
+      <img src="img/icon_pencil.png"/>
+      <p>
+        No thoughts here yet!<br>
+        Journal whatever is on your mind.
+      </p>
+      <button ui-sref="newThought">
+        <span>Post a Thought</span>
+      </button>
+    </div>
+
+  </ion-content>
+</ion-view>

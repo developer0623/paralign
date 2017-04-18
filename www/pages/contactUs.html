@@ -1,0 +1,28 @@
+<ion-view id="contactUs"
+          hide-back-button="true"
+          title="Contact Us">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'"
+                ng-click="$state.go('home')">
+    </ng-include>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+
+  <ion-content scroll="false">
+    <h4>
+      We love to hear about your Paralign experience and
+      are happy to answer any questions.
+    </h4>
+
+    <textarea ng-model="feedback.content" focus-me></textarea>
+
+    <br>
+
+    <button ng-click="sendFeedback()">Send</button>
+
+  </ion-content>
+</ion-view>

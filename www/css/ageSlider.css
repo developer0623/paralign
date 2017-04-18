@@ -1,0 +1,43 @@
+.age-slider {
+  margin-top: 2rem;
+}
+
+.age-slider .rz-pointer-min:after {
+  display: none;
+}
+
+.age-slider .rz-pointer-min {
+  background-color: #ff6a6a;
+}
+
+.age-slider .rz-pointer-min .rz-pointer-min-value-custom {
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.age-slider .rz-pointer-min .rz-pointer-min-value-custom > span {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.age-slider .rz-selection  {
+  background: #ff6a6a !important;
+}
+
+.age-slider .rz-bar  {
+  background: #E2E2E2;
+}
+
+.age-slider .rz-bubble {
+  opacity: 0 !important;
+  -webkit-animation: fadeout 0.7s;
+  animation: fadeout 0.7s;
+}
+
+.age-slider.isStarted .rz-bubble {
+  -webkit-animation: fadein 0.7s;
+  animation: fadein 0.7s;
+}

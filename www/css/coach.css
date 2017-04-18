@@ -1,0 +1,110 @@
+#companion {
+  background: #F8F8F8;
+  /* background: rgba(70, 70, 70, 1); */
+}
+
+#companion > ion-content {
+  top: 44px;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) #companion > ion-content {
+  top: 64px;
+}
+
+#companion ion-content ion-list .list {
+  padding: 0;
+}
+
+#companion ion-content ion-list ion-item {
+  display: block;
+  width: calc(100% - 1.6rem);
+  height: 13rem;
+  padding: 2.4rem 1.6rem;
+  border: none;
+  margin: 0.8rem 0;
+  left: 0.8rem;
+  right: 0.8rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.32);
+  /*
+  display: block;
+  width: 100%;
+  height: 13rem;
+  padding: 2.5rem 1.5rem;
+  border: none;
+  margin: 0;
+  */
+}
+
+#companion ion-content ion-list ion-item.ice-diving {
+  background: rgba(188, 227, 210, 1);
+}
+#companion ion-content ion-list ion-item.sunshine-hill {
+  background: rgba(130, 161, 114, 1);
+}
+#companion ion-content ion-list ion-item.calm-lake {
+  background: rgba(89, 137, 122, 1);
+}
+
+#companion ion-content ion-list ion-item.ice-diving .item-content p {
+  background: rgba(96, 180, 160, 1);
+}
+#companion ion-content ion-list ion-item.sunshine-hill .item-content p {
+  background: rgba(185, 195, 135, 1);
+}
+#companion ion-content ion-list ion-item.calm-lake .item-content p {
+  background: rgba(112, 164, 140, 1);
+}
+
+
+#companion ion-content ion-list ion-item .img-wrapper {
+  display: table-cell;
+  width: 8rem;
+  margin: 1.6rem;
+  vertical-align: middle;
+}
+
+#companion ion-content ion-list ion-item .img-wrapper img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+#companion ion-content ion-list ion-item .item-content {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 0 0 1.6rem;
+  overflow: hidden;
+}
+
+#companion ion-content ion-list ion-item .item-content h3 {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+#companion ion-content ion-list ion-item .item-content p {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+  /* padding: 0.4rem 1.6rem; */
+  display: block;
+  border-radius: 1.5rem;
+  width: 12rem;
+  height: 2.4rem;
+  /* line-height: 1.6rem; */
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+#companion ion-content ion-list ion-item .item-content i {
+  color: #fff;
+  font-size: 3.2rem;
+  display: block;
+  position: absolute;
+  right: 2.4rem;
+  top: calc(50% - 1.8rem); /*  1.8 == 3.6 / 2  */
+}

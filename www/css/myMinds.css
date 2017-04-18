@@ -1,0 +1,403 @@
+#myMinds {
+  background: #F0F0F0;
+}
+
+#myMinds .message-full-page {
+  background: #F8F8F8;
+}
+
+#myMinds .message-full-page.no-clusters-msg h2 {
+  color: #F66D61;
+}
+
+#myMinds .message-full-page.post-thought-msg h2 {
+  color: #F57215;
+}
+
+#myMinds ion-content .scroll {
+  height: 100%;
+}
+
+#myMinds list-item-loader ion-item {
+  background: none;
+}
+
+
+
+#myMinds .part {
+  padding: 0.8rem;
+}
+
+#myMinds .part h2 {
+  font: 1.8rem/2.4rem OpenSans, sans-serif;
+  margin: 0.8rem 0.8rem 1.6rem 0.8rem;
+  color: rgba(0,0,0,0.72);
+}
+
+#myMinds .item-unselected {
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+#myMinds .item-selected {
+  box-shadow: inset 0 0 26px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+
+
+
+/*
+ * Thoughts
+ */
+#myMinds .thoughts-list,
+#myMinds .thoughts-list .list {
+  padding: 0;
+}
+
+#myMinds .thoughts-list .date-item {
+  background: none;
+  text-align: left;
+  color: rgba(0,0,0,0.72);
+  font: 1.8rem/2.4rem OpenSans, sans-serif;
+  padding: 1.6rem 1.6rem 0.8rem 0.8rem;
+  border: none;
+  margin: -1px 0 0 0;
+}
+
+#myMinds .thoughts-list .thought-item {
+  padding: 0;
+  margin: 0 0 0.8rem 0;
+  display: block;
+  width: 100%;
+  min-height: 8rem;
+  white-space: normal;
+  border: none;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.16);
+          box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.16);
+}
+
+#myMinds .thoughts-list .thought-item .content-part {}
+
+#myMinds .thoughts-list .thought-item .content-main {
+  width: calc(100% - 8rem);
+  min-height: 8rem;
+  float: left;
+  padding: 1.6rem 0.8rem 0.8rem 1.6rem;
+  display: table;
+}
+
+#myMinds .thoughts-list .thought-item .content-main p {
+  white-space: normal;
+  color: rgba(0,0,0,0.8);
+  font: 1.6rem/2.4rem ProximaNova-Regular, OpenSans, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .details {
+  display: table-row;
+  height: 2.4rem;
+}
+
+#myMinds .thoughts-list .thought-item .content-main i.date {
+  border: none;
+  background: none;
+  font-family: ProximaNova-Semibold, OpenSans, sans-serif;
+  font-size: 1rem;
+  line-height: 2.4rem;
+  color: rgba(0,0,0,0.64);
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .not-alone {
+  /* display: inline-block; */
+  display: none; /* Do Not Show if there are no Likes/YANAs */
+  height: 1.8rem;
+  margin: 0.3rem 0;
+  float: right;
+  background: #E0E0E0;
+  color: #FFF;
+  border-radius: 0.2rem;
+  padding: 0rem 0.4rem;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .not-alone-active {
+  display: inline-block;
+  height: 1.8rem;
+  margin: 0.3rem 0;
+  margin-left: 0.8rem;
+  background: #FFF;
+  color: #FF7979;
+  border-radius: 0.2rem;
+  padding: 0rem 0.4rem;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .not-alone > i,
+#myMinds .thoughts-list .thought-item .content-main .not-alone-active > i {
+  display: inline;
+  width: 1.2rem;
+  height: 1.2rem;
+  float: left;
+  clear: both;
+  margin: 0;
+  margin-top: 0.4rem;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .not-alone > .number,
+#myMinds .thoughts-list .thought-item .content-main .not-alone-active > .number  {
+  color: #FF7979;
+  font-family: OpenSans-Regular, sans-serif;
+  line-height: 1.7rem;
+  font-size: 1rem;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.1rem 0 0.4rem;
+  margin: 0;
+}
+
+#myMinds .thoughts-list .thought-item .content-main .not-alone > .number.gray {
+  color: #FFF;
+}
+
+#myMinds .thoughts-list .thought-item .content-right {
+  width: 8rem;
+  min-height: 8rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row.mood {
+  padding: 1.2rem;
+  background: #FCFCFC;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row .row-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row.mood .row-content .img-wrapper img {
+  padding: 0;
+  margin: -1px;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row.intensity {
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row.intensity span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row .row-content .img-wrapper {
+  /* background: rgba(252, 235, 184, 1); */
+  border-radius: 50%;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-list .thought-item .content-right .t-row .row-content .img-wrapper img {
+  width: 100%;
+  vertical-align: middle;
+}
+/*
+ * End Thoughts
+ */
+
+
+
+
+
+
+/*
+ * Clusters
+ */
+
+#myMinds .thoughts-clusters,
+#myMinds .thoughts-clusters .list {
+  padding: 0;
+}
+
+#myMinds .thoughts-clusters .list {
+  margin-top: -1px;
+}
+
+#myMinds .thoughts-clusters .thought-item {
+  padding: 0;
+  margin: 0 0 0.8rem 0;
+  display: block;
+  width: 100%;
+  min-height: 6.4rem;
+  white-space: normal;
+  border: none;
+  border-radius: 2px;
+  background: #FFF;
+  /* box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.12); */
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+          box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.24);
+}
+
+#myMinds .thoughts-clusters .thought-item:last-child {
+  border-bottom: none;
+}
+
+#myMinds .thoughts-clusters .thought-item.activated {
+  background: #fff;
+  box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.16);
+  -webkit-transition: box-shadow linear 280ms;
+          transition: box-shadow linear 280ms;
+}
+
+#myMinds .thoughts-clusters .thought-item .content-main {
+  width: calc(100% - 8rem);
+  min-height: 6.4rem;
+  float: left;
+  padding: 1.6rem 0.8rem 1.6rem 1.6rem;
+  display: table;
+}
+
+#myMinds .thoughts-clusters .thought-item .content-main p {
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+#myMinds .thoughts-clusters .thought-item .content-right {
+  width: 8rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgb(192, 192, 192);
+  min-width: 8rem;
+  max-width: 8.8rem;
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right .t-row {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right .t-row span {
+  color: #fff;
+  font-family: ProximaNova-Semibold, OpenSans-Bold, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Mood Clusters */
+#myMinds .thoughts-clusters .thought-item .content-right span.intensity-color,
+#myMinds .thoughts-clusters .thought-item .content-right span {
+  background: #82878A; /* Default/fallback * Gray */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.happy {
+  background: #F68200 !important; /* #E47F0D */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.peaceful {
+  background: #00B0DC !important; /* #179EC0 */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.sad {
+  background: #724DAC !important; /* #8173AC | #68579B */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.mad {
+  background: #D64A57 !important; /* #F34D5C */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.nervous {
+  background: #85B23F !important; /* #94CB40 */
+}
+
+#myMinds .thoughts-clusters .thought-item .content-right span.neutral {
+  background: #556F7C !important; /* #56666E | #536C78 */
+}
+/*
+ * End Clusters
+ */
+
+
+
+
+#myMinds .small-message {
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  text-align: center;
+}
+
+#myMinds .small-message img {
+  width: 5.6rem;
+}
+
+#myMinds .small-message h2 {
+  color: #F66D61;
+  font-size: 1.6rem;
+  margin: 0 0 0.8rem 0;
+  font-family: ProximaNova-Semibold, OpenSans, sans-serif;
+}
+
+#myMinds .small-message p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 0 1.6rem 1.6rem;
+}
+
+
+.popover-selected-thought {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.56) !important;
+ }
+
+.popover-selected-thought .thoughts-list {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  padding: 1rem !important;
+}
+
+.popover-selected-thought .thoughts-list ion-item {
+  box-shadow: 0 0.8rem 0.8rem rgba(0,0,0,0.12) !important;
+}

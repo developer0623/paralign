@@ -1,0 +1,416 @@
+#wonderingMinds ion-content {
+  background: rgb(56,56,56);
+}
+
+#wonderingMinds .message-full-page h2 {
+  color: rgb(100, 182, 162);
+}
+
+#wonderingMinds .cards-template {
+  display: block;
+  background: rgb(56,56,56);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#wonderingMinds .cards-template .fake-cards {
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: calc(50% - 25rem);
+}
+
+#wonderingMinds .cards-template .fake-cards .fake-card {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  height: 50rem;
+  min-width: 50%;
+  top: 0;
+  bottom: 0;
+}
+
+#wonderingMinds .cards-template .fake-cards .fake-card-1 {
+  width: 84%;
+  left: 8%;
+  right: 8%;
+  top: -0.8rem;
+}
+
+#wonderingMinds .cards-template .fake-cards .fake-card-2 {
+  width: 76%;
+  left: 12%;
+  right: 12%;
+  top: -1.6rem;
+}
+
+#wonderingMinds .cards-template .fake-cards .fake-card-3 {
+  width: 68%;
+  left: 16%;
+  right: 16%;
+  top: -2.5rem
+}
+
+
+#wonderingMinds .cards-template td-cards {
+  display: block;
+  text-align: center;
+  height: calc(50% - 25rem + 44rem);
+}
+
+#wonderingMinds .cards-template td-cards .td-cards {
+  display: inline-block;
+  width: 100%;
+
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card.lock-move {
+  -webkit-transform: translate3d(0px, 0px, 0px) rotate(0rad) !important;
+  transform: translate3d(0px, 0px, 0px) rotate(0rad) !important;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card {
+  overflow: hidden;
+  position: absolute;
+  top: calc(50% - 25rem - 4px);
+  bottom: 0;
+  left: calc(5% - 2px);
+  right: calc(5% - 2px);
+  margin: 0;
+  width: calc(90% + 2px + 2px);
+  height: calc(50rem + 6px);
+  min-height: 48rem;
+  display: inline-block;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .td-card .flip-card  {
+  margin: 0;
+  height: 50rem;
+  min-height: inherit;
+  width: 100%;
+  display: inline-block;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0.4rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .td-card {
+  height: 100%;
+  padding: 4px 3px 0 3px;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .flip-card .card-side {
+  height: 100%;
+  width: inherit;
+  border-radius: inherit;
+}
+
+/* Card Header */
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header {
+  height: 7.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  background: rgba(0,0,0,0.02);
+  border-bottom: 0.1rem solid rgba(0,0,0,0.02);
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header .mood {
+  /* background: rgb(252, 235, 184); */
+  float: left;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header .mood img {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header .intensity {
+  height: 1.6rem;
+  width: 1.6rem;
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  top: 1.2rem;
+  left: 4.6rem;
+  line-height: 1.6rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header .intensity-content {
+  color: #fff;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  font-size: 1.2rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-header .date {
+  font-family: OpenSans, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  color: rgb(70, 70, 70);
+  /* margin: 2.4rem 0 0 0; */
+  text-align: left;
+  display: inline-block;
+  width: calc(100% - 6.4rem);
+  padding: 0.8rem 0;
+  vertical-align: middle;
+  margin: 0;
+}
+
+
+/* Card Content */
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content {
+  padding: 0;
+  margin: 0;
+  display: table;
+  height: calc(100% - 12.8rem);
+  width: inherit;
+  position: relative;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: inherit;
+}
+
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper .text {
+  margin: 0;
+  padding: 0 2.4rem;
+  font-family: OpenSans, sans-serif;
+  font-size: 2.4rem;
+  color: rgb(70, 70, 70);
+  line-height: 3.2rem;
+  text-align: center;
+  width: inherit;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper .text.small-text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper .text.align-left {
+  text-align: left;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper .date {
+  font-family: OpenSans, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  color: rgb(70, 70, 70);
+  margin: 2.4rem 0 0 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-content .content-wrapper .date.attach-bottom {
+  position: absolute;
+  bottom: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12.8rem;
+  border-top: 0.1rem solid rgba(0,0,0,0.04);
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer.full {
+  height: 5.6rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top,
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  display: block;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer.full .part-bottom {
+  height: 100%;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .icon-center {
+  width: 7.6rem;
+  height: 7.6rem;
+  display: block;
+  position: absolute;
+  left: calc(50% - 3.8rem);
+  top: -3.8rem;
+  z-index: 2;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .icon-center img {
+  width: 100%;
+  height: 100%;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .mood {
+  background: rgb(252, 235, 184);
+  float: left;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .mood .img-wrapper {
+  text-align: center;
+  display: block;
+  height: 4.8rem;
+  position: absolute;
+  top: calc(50% - 2.4rem);
+  left: calc(50% - 2.4rem);
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .mood .img-wrapper img {
+  display: inline-block;
+  height: 100%;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .intensity {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  top: calc(50% - 2.8rem);
+  left: calc(50% + 1.1rem);
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-top .intensity .intensity-content {
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom {
+  display: block;
+  background: #FFF;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: rgb(70, 70, 70);
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span button.btn-connect {
+  background-color: rgba(255,255,255,1); /* rgb(142, 180, 123) */
+  border-bottom-right-radius: 0.4rem;
+  height: 100%;
+  width: 50%;
+  float: right;
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0.8rem;
+  border-left: 0.1rem solid rgba(0,0,0,0.04);
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span button.btn-connect img {
+  height: 2.4rem;
+  margin: 0;
+  padding: 0.1rem;
+  margin-top: 0.4rem;
+}
+
+
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span button.btn-not-alone {
+  background: rgba(255,255,255,1); /* #ff6a6a */
+  border-bottom-left-radius: 0.4rem;
+  height: 100%;
+  width: 50%;
+  float: left;
+  color: #fff;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0.8rem;
+  border-right: 0rem solid rgba(0,0,0,0.04);
+  /*-webkit-transition: background 200ms linear;
+          transition: background 200ms linear;*/
+}
+
+#wonderingMinds .cards-template td-cards .td-cards td-card .card-footer .part-bottom span button.btn-not-alone img {
+  height: 2.4rem;
+  margin: 0;
+  padding: 0.2rem;
+  margin-top: 0.4rem;
+}
+
+
+
+
+
+
+.card-fadein {
+  -webkit-animation: fadein 0.7s;
+  animation: fadein 0.7s;
+}
+.card-fadein.ng-leave {
+  transition: 300ms linear all;
+  opacity: 1;
+}
+.card-fadein.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+.heart-fadein {
+  -webkit-animation: fadein-pulse 0.7s;
+          animation: fadein-pulse 0.7s;
+}
+.heart-fadein.ng-leave {
+  transition: 300ms linear all;
+  opacity: 1;
+  padding: 0.2rem;
+}
+.heart-fadein.ng-leave.ng-leave-active {
+  opacity: 0;
+  padding: 0rem;
+}

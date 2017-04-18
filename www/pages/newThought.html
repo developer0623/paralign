@@ -1,0 +1,16 @@
+<ion-view title="New Thought"
+          id="newThought"
+          hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-close.html'" ui-sref="home"></ng-include>
+  </ion-nav-buttons>
+
+
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+
+  <ng-include ng-if="shareTemplate" src="shareTemplate"></ng-include>
+
+</ion-view>

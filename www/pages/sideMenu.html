@@ -1,0 +1,253 @@
+<ion-side-menus delegate-handle="mainSideMenu"
+                ng-init="init()"
+                ng-controller="MainNavigationCtrl">
+
+  <div ng-if="isShowMenu">
+    <menu-fader ng-class="{ 'fader-displayNone': !isShowFader }"></menu-fader>
+  </div>
+
+
+  <ion-side-menu side="right"
+                 width="{{getScreenWidth()}}">
+
+    <ion-nav-bar delegate-handle="mainNavBar"
+                 class="bar-stable parheaderbg"
+                 ng-class=" 'custom-style-' + navBarColor "
+                 align-title="center"
+                 animation="no-animation">
+
+      <ion-nav-back-button class="button-icon icon button-clear ion-chevron-left">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view id="mainContent" name="mainContent"></ion-nav-view>
+
+  </ion-side-menu>
+
+
+
+
+
+  <ion-side-menu-content id="sideMenu"
+                         ng-class="{ 'fader-transparent': !isShowMenu }"
+                         style="width: 80%;">
+    <ion-header-bar align-title="right" style="height: 88px">
+      <div>
+        <span>
+          <h1 class="title">
+            My Account
+          </h1>
+          <p class="title"
+             ng-bind="user.email || 'Anonymous'">
+          </p>
+        </span>
+      </div>
+    </ion-header-bar>
+
+    <ion-content class="menu-content" scroll="false" style="top: 88px; overflow: scroll !important;">
+      <ion-list>
+        <ion-scroll has-bouncing="true" direction="y" style="overflow: scroll !important;">
+
+          <ion-item menu-close-on-click
+                    class="border-none item item-complex"
+                    ng-if="user && user.anonymous == true"
+                    ui-sref="login({mode: 'identificationAnonymous'})"
+                    ng-click="trackEvent('identificationanonymous');">
+
+            <label class="item-content">
+              <div class="item-icon">
+                <img src="img/icon-login.png" alt="login" class="item-icon-img"/>
+              </div>
+
+              <div>
+                <p class="item-title">
+                  Login
+                </p>
+              </div>
+            </label>
+          </ion-item>
+
+
+
+
+          <ion-item menu-close-on-click
+                    ng-class="{'border-none': !user || user.anonymous != true}"
+                    ui-sref="tutorial">
+            <div class="item-icon">
+              <img src="img/icon-info-black.png" alt="info" class="item-icon-img"/>
+            </div>
+
+            <div>
+              <p class="item-title">
+                Tutorial
+              </p>
+            </div>
+          </ion-item>
+
+
+
+
+
+          <ion-item class="item item-complex item-toggle-custom">
+            <label class="item-content">
+              <div class="item-icon">
+                <img src="img/icon-notification.png" alt="notification" class="item-icon-img"/>
+              </div>
+
+              <div>
+                <p class="item-title">
+                  Notifications
+                </p>
+
+                <ion-toggle ng-model="toggleNotifications"
+                            ng-change="updateSettingsNotification(toggleNotifications)"
+                            toggle-class="toggle-calm">
+                </ion-toggle>
+              </div>
+            </label>
+          </ion-item>
+
+
+
+
+
+          <ion-item menu-close-on-click
+                    ui-sref="contactUs">
+            <div class="item-icon">
+              <img src="img/icon-mail.png" alt="email" class="item-icon-img"/>
+            </div>
+
+            <div>
+              <p class="item-title">
+                Contact
+              </p>
+            </div>
+          </ion-item>
+
+
+
+
+
+          <ion-item class="item item-complex">
+            <label class="item-content">
+              <div>
+                <p class="item-title">
+                  Age
+                </p>
+                <div class="age-slider-container">
+
+                  <table>
+                    <tr>
+                      <td>
+                        <div ng-click="ageSliderMinus()"
+                             style="width: 2.4rem;
+                                    text-align: left;
+                                    padding: 0.8rem 0;">
+                          <img src="img/left-arrow@2x.png"
+                               alt="left-arrow"
+                               class="item-icon-img"
+                               style="width: 1.6rem;"/>
+                        </div>
+                      </td>
+                      <td>
+                        <rzslider
+                            class="age-slider"
+                            ng-class="{'isStarted': slider.started && !slider.ended}"
+                            rz-slider-model="sliderDetail.age"
+                            rz-slider-tpl-url="pages/templates/template-age-rz-slider.html"
+                            rz-slider-options="slider.options"></rzslider>
+                      </td>
+                      <td>
+                        <div ng-click="ageSliderPlus()"
+                             style="width: 2.4rem;
+                                    text-align: right;
+                                    padding: 0.8rem 0;">
+                          <img src="img/right-arrow@2x.png"
+                               alt="right-arrow"
+                               class="item-icon-img"
+                               style="text-align: right; width: 1.6rem;"/>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </label>
+          </ion-item>
+
+
+
+
+
+          <ion-item class="item item-complex border-none padding-top-0">
+            <a class="item-content">
+              <div>
+                <p class="item-title">
+                  Gender
+                </p>
+                <div class="gender-buttons row">
+                  <button class="col"
+                          ng-click="changeGender('female')"
+                          ng-class="{'active': user && user.gender == 'female'}">
+                    Female
+                  </button>
+
+                  <button class="col"
+                          ng-click="changeGender('male')"
+                          ng-class="{'active': user && user.gender == 'male'}">
+                    Male
+                  </button>
+
+                  <button class="col"
+                          ng-click="changeGender('other')"
+                          ng-class="{'active': user && user.gender != 'female' &&  user.gender != 'male'}">
+                    Other
+                  </button>
+                </div>
+              </div>
+            </a>
+          </ion-item>
+
+
+
+
+
+
+          <ion-item menu-close-on-click
+                    class="item item-complex"
+                    ng-click="logout(); trackEvent('logout');">
+
+            <label class="item-content">
+              <div class="item-icon">
+                <img src="img/icon-signout.png" alt="signout" class="item-icon-img"/>
+              </div>
+
+              <div>
+                <p class="item-title">
+                  Logout
+                </p>
+              </div>
+            </label>
+          </ion-item>
+
+
+          <ion-item class="border-none">
+            <br/>
+          </ion-item>
+
+        </ion-scroll>
+
+
+
+
+        <ion-item class="version" nav-clear>
+          App Version {{ ::appVersion || 0 }} Build {{ ::appBuild || 0 }} {{ !isProduction ? '(dev)' : '' }} {{ ::isTestServer ? '(test)' : '' }}
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+
+  </ion-side-menu-content>
+
+</ion-side-menus>

@@ -1,0 +1,65 @@
+<ion-view title="Chats"
+          id="connections"
+          hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'"
+                ng-click="goBack();">
+    </ng-include>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <!-- None buttons -->
+  </ion-nav-buttons>
+
+  <ion-content scroll="false" ng-if="!isLoading && !getNumberOfVisibleChats(connections)" class="has-header">
+    <div class="message-full-page has-button fadein">
+      <img src="img/icon_connect.png"/>
+      <p>
+        Waiting on a snail! <br>
+        See what others are thinking.
+      </p>
+      <button ui-sref="wonderingMinds">
+        <span>Browse Wondering Minds</span>
+      </button>
+    </div>
+  </ion-content>
+
+  <ion-content scroll="true" has-bouncing="true">
+
+    <ion-list show-delete="false" can-swipe="true">
+
+      <list-item-loader is-hide="!isLoading" duration="500" delay="0.3"></list-item-loader>
+
+      <ion-item class="fadein"
+                can-swipe="true"
+                ng-if="getNumberOfVisibleChats(connections) > 0 && chat && !isHidden(chat)"
+                ng-repeat="chat in connections | orderBy:'updatedAt':true track by $index"
+                data-id="{{ chat.id }}"
+                ng-class="{ 'selected' : chat.hasUnread }">
+
+        <div class="img-wrapper fadein" ng-click="$state.go('chat', {id: chat.id})">
+          <img ng-if="chat.private"  src="img/icon_anonymous.png"/>
+          <img ng-if="!chat.private" src="img/icon_anonymous_group.png"/>
+        </div>
+
+        <div class="item-info fadein" ng-click="$state.go('chat', {id: chat.id})">
+          <h3 ng-bind="chat.name || 'Anonymous'"></h3>
+          <p ng-bind="chat && chat.aboutThought ? chat.aboutThought.content : ''"></p>
+          <i class="icon-arrow-red fadein"></i>
+        </div>
+
+        <ion-option-button ng-if="isLocked(chat)"
+                           class="button-light icon ion-android-lock"
+                           ng-click="unlockConnection(chat.id); trackEvent('chatunlock');"></ion-option-button>
+        <ion-option-button ng-if="!isLocked(chat)"
+                           class="button-light icon ion-android-unlock"
+                           ng-click="lockConnection(chat.id); trackEvent('chatlock');"></ion-option-button>
+        <ion-option-button class="button-light icon ion-trash-a"
+                           ng-click="removeConnection(chat.id); trackEvent('chatleave');"></ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-view>

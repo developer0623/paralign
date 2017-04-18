@@ -1,0 +1,153 @@
+<ion-view id="similarMinds"
+          title="Similar Minds"
+          no-drag-right
+          no-drag-left
+          hide-back-button="true">
+
+  <ion-nav-buttons side="left">
+    <ng-include src="'pages/templates/button-back.html'"
+                ng-click="goBack();">
+    </ng-include>
+  </ion-nav-buttons>
+
+
+  <ion-nav-buttons side="right">
+    <!--button class="button button-icon button-clear"
+            ng-if="cards && cards.length"
+            ng-click="reportModal(); trackEvent('similarmenu')">
+      <i class="button-icon icon button button-clear ion-android-more-vertical"></i>
+    </button-->
+  </ion-nav-buttons>
+
+
+  <ion-content scroll="true" direction="y">
+
+    <!-- ********** -->
+    <div class="cardloop fade"
+         ng-repeat="card in cards"
+         ng-if="cards && cards.length">
+
+      <!--SimMind Card-->
+      <ion-card class="" id={{"widget"+$index}}>
+
+        <ion-card-content>
+          <!-- Aligned Thought -->
+          <ion-item class="their-thought">
+
+            <div class="animalname left">
+              <p> {{ucfirst(card.thought.mood)}} {{ adj_user_sim_tit[$index]['adjective']}}
+                {{adj_user_sim_tit[$index]['sim']}}</p>
+            </div>
+            <ion-avatar item-left>
+              <img align="left"
+                   ng-src="img/similarminds/{{ adj_user_sim_tit[$index]['sim'] }}-{{card.thought.mood}}.png"/>
+            </ion-avatar>
+            <div class="triangle triangle-{{card.thought.mood}}"></div>
+            <div class="thought-bubble text-{{card.thought.mood}}">
+              <p class="text align-left"
+                 ng-class="{'small-text': card.thought.content.length > charactersLimit}"
+                 ng-bind="::card.thought.content">
+              </p>
+            </div>
+          </ion-item>
+          <!--//END Aligned Thought-->
+
+          <!--Your Thought-->
+          <ion-item class="your-thought">
+            <div class="animalname right">
+              <p> You </p>
+            </div>
+            <ion-avatar item-right>
+              <img align="right"
+                   ng-src="img/similarminds/{{ adj_user_sim_tit[$index]['user']}}-{{card.sim_thought.mood}}.png"/>
+            </ion-avatar>
+            <div class="triangle-alt"></div>
+            <div class="thought-bubble-alt">
+              <p class="text-alt align-left"
+                 ng-class="{'small-text': card.sim_thought.content.length > charactersLimit}"
+                 ng-bind="::card.sim_thought.content">
+              </p>
+            </div>
+          </ion-item>
+          <!--//END Your Thought-->
+        </ion-card-content>
+
+        <ion-card-footer>
+          <span class="row fadein">
+
+            <button class="btn-dismiss col"
+                    col
+                    align='left'
+                    item-left
+                    ng-click="cardDestroyed($index); trackEvent('similarswiperight')">
+              <span class="btn-text-container">
+                <img ng-src="img/icon-delete.png"
+                     src="img/icon-delete.png">
+                <span class="text">Remove</span>
+              </span>
+            </button>
+
+            <button class="btn-connect col"
+                    col
+                    align="right"
+                    item-right
+                    ng-click="connect(card); trackEvent('similarconnect');">
+              <span class="btn-text-container">
+                <img src="img/similarminds/Chat-gr.png"/>
+                <span class="text">Chat</span>
+              </span>
+            </button>
+
+            <!--button class="btn-share col"
+                    ng-click="trackEvent('similarShare')"
+                    col
+                    align='right'
+                    screen-shot
+                    index={{$index}}>
+              <span class="btn-text-container">
+                <img class="card-fadein"
+                     ng-src="img/icon-share.png"
+                     src="img/icon-share.png"
+                     index={{$index}}>
+                <span class="text">Share</span>
+              </span>
+
+              <span class="waterMark-icon fadein-quick"
+                    id={{"waterMark"+$index}}
+                    index={{$index}}>
+                <img class="icon-logo"
+                     ng-src="img/logo.png"
+                     src="img/logo.png">
+                <span class="text">Paralign</span>
+              </span>
+            </button-->
+
+          </span>
+        </ion-card-footer>
+      </ion-card>
+      <!--//End SimMind Card-->
+
+    </div>
+
+
+    <div ng-if="cards && cards.length">
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+
+    <div class="message-full-page has-button fadein-quick"
+         ng-if="!isFirstLoading && (!cards || !cards.length)">
+      <img src="img/icon_simMind.png"/>
+
+      <p class="simMind-empty"> We're aligning thoughts!
+        <br> Post another to move things along. </p>
+      <button ui-sref="newThought">
+        <span>Post a Thought</span>
+      </button>
+    </div>
+
+
+  </ion-content>
+</ion-view>

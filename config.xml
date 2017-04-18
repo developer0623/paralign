@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="me.paralign" ios-CFBundleVersion="107" android-versionCode="107" version="3.602" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Paralign</name>
+    <description />
+    <author email="" href="dunice">
+    Dunice
+  </author>
+    <content src="index.html" />
+    <access origin="http://50.18.178.57/" />
+    <access origin="http://50.18.178.57/socket.io/" />
+    <access origin="http://50.97.233.90/" />
+    <access origin="http://192.168.88.80/" />
+    <access origin="http://api.mixpanel.com/track/" />
+    <access origin="http://api.mixpanel.com/decide/" />
+    <access origin="http://api.mixpanel.com/engage/" />
+    <access origin="file://*" />
+    <access origin="content:///*" />
+    <allow-navigation href="http://50.18.178.57/*" />
+    <allow-navigation href="http://50.97.233.90/*" />
+    <allow-navigation href="http://192.168.88.80/*" />
+    <allow-navigation href="http://file/socket.io/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="file:*" />
+    <preference name="deployment-target" value="7.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="ShowSplashScreen" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="30000" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="0.5" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="showmessageinnotification" value="true" />
+    <preference name="defaultnotificationmessage" value="" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="xwalkVersion" value="15+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+    <preference name="CrosswalkAnimatable" value="true" />
+    <platform name="android">
+        <preference name="fullscreen" value="false" />
+        <feature name="Screenshot">
+            <param name="android-package" value="org.apache.cordova.screenshot.Screenshot" />
+        </feature>
+        <feature name="SocialSharing">
+            <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+        </feature>
+        <feature name="StatusBar">
+            <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+            <param name="onload" value="true" />
+        </feature>
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        </feature>
+        <feature name="Keyboard">
+            <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+            <param name="onload" value="true" />
+        </feature>
+        <feature name="InAppBillingPlugin">
+            <param name="android-package" value="com.smartmobilesoftware.inappbilling.InAppBillingPlugin" />
+        </feature>
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+        </feature>
+        <feature name="UniversalAnalytics">
+            <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+        </feature>
+        <splash density="port-ldpi" src="resources/android/splash/drawable-port-ldpi-screen.png" />
+        <splash density="port-mdpi" src="resources/android/splash/drawable-port-mdpi-screen.png" />
+        <splash density="port-hdpi" src="resources/android/splash/drawable-port-hdpi-screen.png" />
+        <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
+        <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
+        <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+        <icon src="resources/drawable/icon_push.png" />
+    </platform>
+    <platform name="ios">
+        <feature name="SocialSharing">
+            <param name="ios-package" value="SocialSharing" />
+        </feature>
+        <feature name="StatusBar">
+            <param name="ios-package" value="CDVStatusBar" />
+            <param name="onload" value="true" />
+            <feature name="SocialSharing">
+                <param name="ios-package" value="SocialSharing" />
+            </feature>
+        </feature>
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
+        <feature name="Keyboard">
+            <param name="ios-package" onload="true" value="IonicKeyboard" />
+        </feature>
+        <feature name="InAppPurchase">
+            <param name="ios-package" value="InAppPurchase" />
+        </feature>
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
+        <feature name="UniversalAnalytics">
+            <param name="ios-package" value="UniversalAnalyticsPlugin" />
+        </feature>
+        <config-file parent="NSAppTransportSecurity" platform="ios" target="*-Info.plist">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true />
+            </dict>
+        </config-file>
+        <splash height="1136" src="resources/ios/splash/Default-568h@2x~iphone.png" width="640" />
+        <splash height="1334" src="resources/ios/splash/Default-667h.png" width="750" />
+        <splash height="2208" src="resources/ios/splash/Default-736h.png" width="1242" />
+        <splash height="2048" src="resources/ios/splash/Default-Portrait@2x~ipad.png" width="1536" />
+        <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768" />
+        <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
+        <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
+        <icon height="57" src="resources/ios/icon/icon.png" width="57" />
+        <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
+        <icon height="40" src="resources/ios/icon/icon-40.png" width="40" />
+        <icon height="80" src="resources/ios/icon/icon-40@2x.png" width="80" />
+        <icon height="50" src="resources/ios/icon/icon-50.png" width="50" />
+        <icon height="100" src="resources/ios/icon/icon-50@2x.png" width="100" />
+        <icon height="60" src="resources/ios/icon/icon-60.png" width="60" />
+        <icon height="120" src="resources/ios/icon/icon-60@2x.png" width="120" />
+        <icon height="180" src="resources/ios/icon/icon-60@3x.png" width="180" />
+        <icon height="72" src="resources/ios/icon/icon-72.png" width="72" />
+        <icon height="144" src="resources/ios/icon/icon-72@2x.png" width="144" />
+        <icon height="76" src="resources/ios/icon/icon-76.png" width="76" />
+        <icon height="152" src="resources/ios/icon/icon-76@2x.png" width="152" />
+        <icon height="29" src="resources/ios/icon/icon-small.png" width="29" />
+        <icon height="58" src="resources/ios/icon/icon-small@2x.png" width="58" />
+        <icon height="87" src="resources/ios/icon/icon-small@3x.png" width="87" />
+    </platform>
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <icon src="resources/drawable/icon_push.png" />
+    <plugin name="cordova-plugin-console" spec="~1.0.2" />
+    <plugin name="cordova-plugin-device" spec="~1.1.1" />
+    <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
+    <plugin name="cordova-plugin-file" spec="~4.1.1" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
+    <plugin name="cordova-plugin-media" spec="~2.2.0" />
+    <plugin name="com.cmackay.plugins.googleanalytics" spec="~0.1.22" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.3.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="~3.0.0" />
+    <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
+    <plugin name="cordova-plugin-facebook4" spec="~1.1.0">
+        <variable name="APP_ID" value="729874613743970" />
+        <variable name="APP_NAME" value="Paralign" />
+    </plugin>
+    <plugin name="phonegap-plugin-push" spec="~1.7.0">
+        <variable name="SENDER_ID" value="252713347101" />
+    </plugin>
+    <plugin name="cc.fovea.cordova.purchase" spec="https://github.com/j3k0/cordova-plugin-purchase.git">
+        <variable name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtCL7wR6Cn0IwXOLjI+lQjyZ4NjtOmwPLpi/eD1GmkkSsy5dJtx2HGXpJALmheEawpYi+MJM1LnkLZujqPUVB32DHGfazNFB+Fnrbh7BlFW9zEPfUuJ6M3VgSFzJ0QeuHSbdpIuQyRs/2dWE+IgymM2P9ad06R93CrOkc+nEnGccP5quX73pXVySEgl8i30A+VuQWHZFhuwrrIvQj9htIxk2PSy35BHoULnohPFCmjJ/NXyB7AG6GXTmUv1XPPblguwLlKxakKoz9yOLezKAoJi9G13OaCRdD/1NT0KURE0Nag6FqcGcmGlBrGcjlY5JkstQcOpGKJ4GHmBS9xsKHVwIDAQAB" />
+    </plugin>
+    <plugin name="cordova-plugin-app-version" spec="~0.1.8" />
+</widget>

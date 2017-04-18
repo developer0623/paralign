@@ -1,0 +1,213 @@
+<ion-view id="sunshine"
+          hide-back-button="true"
+          hide-nav-bar="false"
+          title="Sunshine Hill"
+          no-drag-right
+          no-drag-left>
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon"
+            ui-sref="companion"
+            ng-click="trackEvent('sunshineleave')">
+      <i class="icon-close-sun"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon"
+            ng-click="openModalInfo(); trackEvent('sunshineinfo')">
+      <i class="icon-info-sun"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ng-include ng-if="sunshineTemplate" src="sunshineTemplate"></ng-include>
+
+
+</ion-view>
+
+
+
+
+
+
+<!-- Templates -->
+
+<script id="tmplt-sunshine-mindText" type="text/ng-template">
+  <ion-content class="guide slide-1 has-not-header" scroll="false">
+    <textarea placeholder="Whats on your mind?"
+              ng-model="thought.content"
+              class="no-resize fadein"
+              minlength="1"
+              maxlength="{{ thoughtMaxLength }}"
+              focus-me></textarea>
+    <!--p class="thought-limit fadein" ng-if="thought.content.length > 220">{{ thought.content.length }}/{{ ::thoughtMaxLength }} characters</p-->
+    <p class="thought-limit" fadein="400" fadeout="40" ng-if="thought.content.length > 220 && thought.content.length < 281">{{ thought.content.length }}/{{ ::thoughtMaxLength }} characters</p>
+    <p class="thought-limit danger" fadein="1200" fadeout="40" ng-if="thought.content.length > 280">{{ thought.content.length }}/{{ ::thoughtMaxLength }} characters</p>
+
+    <button class="action-button fadein"
+            ng-disabled="!thought || !thought.content"
+            ng-click="nextStep()"
+            attach-when-opened="10"
+            attach-when-closed="110"
+            attach-bottom-if-keyboard-open>
+      Next
+      <!--i class="icon ion-chevron-right"></i-->
+    </button>
+  </ion-content>
+</script>
+
+
+
+
+
+
+<script id="tmplt-sunshine-moodType" type="text/ng-template">
+  <ion-content class="guide slide-1 tmplt-moodType has-not-header fadein" scroll="false">
+
+    <h2 class="title fadein"> What's your mood? </h2>
+
+    <div class="moodbox fadein">
+      <div class="row">
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('happy'); nextStep();">
+            <img class="fadein" src="img/moods/brown/happy.png"></ion-radio>
+            <h2>Happy</h2>
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('peaceful'); nextStep();">
+            <img class="fadein" src="img/moods/brown/peaceful.png"></ion-radio>
+            <h2>Peaceful</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('sad'); nextStep();">
+            <img class="fadein" src="img/moods/brown/sad.png"></ion-radio>
+            <h2>Sad</h2>
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('mad'); nextStep();">
+            <img class="fadein" src="img/moods/brown/mad.png"></ion-radio>
+            <h2>Mad</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('nervous'); nextStep();">
+            <img class="fadein" src="img/moods/brown/nervous.png"></ion-radio>
+            <h2>Nervous</h2>
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="holdicon fadein">
+            <ion-radio icon="false" class="facebg" ng-click="setMoodType('neutral'); nextStep();">
+            <img class="fadein" src="img/moods/brown/neutral.png"></ion-radio>
+            <h2>Neutral</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</script>
+
+
+
+
+
+
+
+
+
+<script id="tmplt-sunshine-moodIntense" type="text/ng-template">
+  <ion-content class="guide slide-1 tmplt-moodIntense has-not-header fadein" scroll="false">
+
+    <h2 class="fadein"> How intense is your mood? </h2>
+
+    <div class="intense-rating fadein">
+      <ion-radio ng-repeat="val in [5, 4, 3, 2, 1, 0]"
+                 icon="false"
+                 ng-class="'intensity-color-' + val"
+                 ng-click="setMoodIntense(val); nextStep();">
+        {{ ::val }}
+      </ion-radio>
+    </div>
+  </ion-content>
+</script>
+
+
+
+
+
+
+<script id="tmplt-sunshine-meditation" type="text/ng-template">
+  <ion-content class="guide meditation has-not-header fadein" scroll="false">
+
+    <span class="med-message" ng-if="showMessage">
+      <h2 class="fadein"> Ready to meditate? </h2>
+      <i class="icon-arrow-down-sun slideInDown animated"></i>
+      <br>
+      <i class="icon-arrow-down-sun slideInDown animated"></i>
+    </span>
+
+    <div class="button-and-loader fadein">
+      <span class="loader"
+            round-progress
+            max="timerDuration"
+            current="timerCurrent"
+            color="rgb(82, 136, 121)"
+            bgcolor="rgb(130, 161, 114)"
+            radius="80"
+            stroke="20"
+            semi="false"
+            rounded="false"
+            clockwise="true"
+            responsive="false"
+            duration="500"
+            animation="easeInOutQuart"></span>
+
+      <button class="circle-button"
+              ng-click="!timerFinished ? timerToggle() : ''"
+              ng-if="!isLoading">
+        {{ isPlay || timerFinished ? timerString : 'Start' }}
+      </button>
+
+      <button class="circle-button fadein"
+              ng-if="isLoading">
+        <ion-spinner class="audio-spinner" icon="ripple"></ion-spinner>
+      </button>
+    </div>
+  </ion-content>
+</script>
+
+
+
+
+
+<script id="tmplt-sunshine-endOfGuide" type="text/ng-template">
+  <ion-content class="guide finish has-not-header fadein" scroll="false">
+    <h1>
+      Alright!
+    </h1>
+
+    <h4>
+      See you next time!
+    </h4>
+
+    <button class="action-button" ng-click="nextStep()">
+      Done
+    </button>
+  </ion-content>
+</script>

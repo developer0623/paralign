@@ -1,0 +1,11 @@
+{
+  "name": "Paralign",
+  "app_id": "f9d6dd95",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}

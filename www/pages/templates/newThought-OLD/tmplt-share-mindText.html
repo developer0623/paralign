@@ -1,0 +1,26 @@
+<ion-content class="tmplt-mindText" scroll="false">
+  <div class="img-wrapper animated" new-thought-pen>
+    <img src="img/icon_pencil.png"/>
+  </div>
+
+  <textarea placeholder="Talk to me ..."
+            ng-model="thought.content"
+            class="no-resize"
+            minlength="1"
+            maxlength="{{ thoughtMaxLength }}"
+            ng-change="on_change_chacheThoughtLocalStorage(thought.content);"
+            msd-elastic
+            fadein="1100"
+            focus-me="1700"></textarea>
+  <p class="thought-limit" fadein="400" fadeout="40" ng-if="thought.content.length > 220 && thought.content.length < 281">{{ thought.content.length }}/{{ ::thoughtMaxLength }} characters</p>
+  <p class="thought-limit danger" fadein="1200" fadeout="40" ng-if="thought.content.length > 280">{{ thought.content.length }}/{{ ::thoughtMaxLength }} characters</p>
+
+  <button class="action-button fadein"
+          ng-disabled="!thought || !thought.content"
+          ng-click="nextStep()"
+          attach-when-opened="10"
+          attach-when-closed="110"
+          attach-bottom-if-keyboard-open>
+    <span> Next </span>
+  </button>
+</ion-content>

@@ -1,0 +1,316 @@
+.fader-transparent {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+.fader-displayNone {
+  display: none !important;
+}
+
+
+ion-side-menu ion-content .scroll,
+ion-side-menu ion-content .scroll .list {
+  height: 100%;
+}
+
+
+#sideMenu {}
+
+#sideMenu ion-header-bar {
+  background: #ff6a6a;
+  padding: 0;
+  margin: 0;
+}
+
+#sideMenu ion-header-bar > div {
+  display: list-item;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sideMenu ion-header-bar > div > span {
+  vertical-align: middle;
+}
+
+#sideMenu ion-header-bar .title {
+  text-align: left;
+  color: #fff;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  position: relative;
+  left: 0 !important;
+  top: 0 !important;
+  margin: 0;
+  padding: 0 0 0 2.5rem;
+}
+
+#sideMenu ion-header-bar h1.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+#sideMenu ion-header-bar p.title {
+  font-size: 1.6rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  text-overflow: ellipsis;
+}
+
+#sideMenu .menu-content {
+  box-shadow: none;
+}
+
+#sideMenu .menu-content .list {
+  background: #F1F1F1;
+  height: 100%;
+}
+
+#sideMenu .menu-content ion-scroll {
+  height: calc(100% - 3.2rem);
+}
+
+#sideMenu .menu-content ion-item.item {
+  padding: 1.8rem 2.4rem;
+  margin: 0;
+  background: #F1F1F1;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 1.8rem;
+}
+
+#sideMenu .menu-content ion-item.padding-top-0 {
+  padding-top: 0;
+}
+
+#sideMenu .menu-content ion-item label {
+  background: none;
+}
+
+#sideMenu .menu-content ion-item .item-content {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#sideMenu .menu-content ion-item .item-content .item-icon {
+  width: 4rem;
+  vertical-align: middle;
+}
+
+#sideMenu .menu-content ion-item .item-content .item-icon-img {
+  width: 1.8rem;
+  vertical-align: middle;
+}
+
+#sideMenu .menu-content ion-item .item-content .item-icon i {
+  width: 2.7rem;
+  height: 2.7rem;
+  vertical-align: middle;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  margin: 0 1px;
+}
+
+#sideMenu .menu-content ion-item .item-content > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#sideMenu .menu-content ion-item .item-content .item-title {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin: 0;
+  color: rgba(0,0,0,0.8);
+}
+
+
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons {
+  height: 5rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons button {
+  height: 100%;
+  background: #E2E2E2;
+  font-size: 1.5rem;
+  color: #c2c1c1;
+  border-radius: 0;
+  border: solid 1px #DADADA;
+}
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons button:first-child {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-right: 0;
+}
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons button:nth-child(2) {
+  border-right: 0;
+  border-left: 0;
+}
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons button:last-child {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-left: 0;
+}
+
+#sideMenu .menu-content ion-item .item-content .gender-buttons button.active {
+  background: #ff6a6a;
+  color: #fff;
+  border: solid 1px #ff6a6a;
+}
+
+
+#sideMenu .menu-content ion-item .age-slider-container,
+#sideMenu .menu-content ion-item .age-slider-container table {
+  width: 100%;
+}
+
+#sideMenu .menu-content ion-item .age-slider-container table tr td:nth-child(2) {
+  width: 90%;
+}
+
+
+#sideMenu .menu-content ion-item .age-slider-container i.left-arrow,
+#sideMenu .menu-content ion-item .age-slider-container i.right-arrow {
+  color: #ff6a6a;
+  font-size: 3rem;
+  display: inline-table;
+  vertical-align: middle;
+  line-height: 4rem;
+  height: 4rem;
+}
+
+#sideMenu .menu-content ion-item .age-slider-container i.left-arrow:before,
+#sideMenu .menu-content ion-item .age-slider-container i.right-arrow:before {
+  line-height: 4rem;
+  height: 4rem;
+  vertical-align: middle;
+}
+
+#sideMenu .menu-content ion-item .age-slider-container i.right-arrow {
+  text-align: right;
+}
+
+#sideMenu .menu-content ion-item .age-slider-container rzslider {
+  margin: 15px 0;
+}
+
+
+
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom {
+  padding: 0 2.4rem 0 2.4rem;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-title {
+  line-height: 6rem;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle {
+  background: none;
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 7rem;
+  height: 6rem;
+  float: right;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle {
+  right: 4px;
+}
+
+.platform-ios #sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle {
+  top: calc(50% - 15px);
+}
+
+.platform-android #sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle {
+  top: calc(50% - 15px);
+}
+
+.platform-android #sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle input:checked+.track .handle {
+  -webkit-transform: translate3d(20px,0,0);
+          transform: translate3d(20px,0,0);
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle input:checked + .track .handle {
+  background-color: #ff6a6a;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle .handle {
+  background-color: #F1F1F1;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle input + .track {
+  background-color: #C2C1C1;
+  border-color: #C2C1C1;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle input:checked + .track {
+  background-color: #FFAFB3;
+  border-color: #FFAFB3;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle .track {
+  width: 50px;
+  height: 30px;
+  border: solid 1px #e6e6e6;
+  border-radius: 24px;
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle .handle {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background-color: #fff;
+  top: 8px;
+  left: 8px;
+  box-shadow: 0 2px 7px rgba(0,0,0,.35),0 1px 1px rgba(0,0,0,.15);
+}
+
+#sideMenu .menu-content ion-item.item.item-toggle-custom .item-toggle .toggle .handle:before {
+  top: -6px;
+  left: -6px;
+  padding: 18px 32px;
+}
+
+
+#sideMenu .menu-content ion-item.item.border-none {
+  border: none;
+}
+
+#sideMenu .menu-content ion-item.item.version {
+  padding: 0.8rem 1.6rem 0.8rem 2.4rem;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.6rem;
+  text-align: left;
+  color: rgba(0,0,0,0.4);
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+#sideMenu .menu-content ion-item.item a {
+  padding: 0;
+  background: none;
+}

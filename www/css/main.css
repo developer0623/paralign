@@ -1,0 +1,561 @@
+* {
+  box-shadow: none;
+  text-transform: none;
+}
+
+html,
+body {
+  background: #ff6a6a;
+  font-size: 10px;
+}
+
+@media screen and (max-height: 569px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadein-grow {
+  from { opacity: 0; padding: 0rem   }
+  to   { opacity: 1; padding: 0.2rem }
+}
+@-webkit-keyframes fadein-grow {
+  from { opacity: 0; padding: 0rem   }
+  to   { opacity: 1; padding: 0.2rem }
+}
+
+@keyframes fadein-pulse {
+  0%   { opacity: 0;    padding: 0rem   }
+  25%  { opacity: 0.25; padding: 0.2rem }
+  50%  { opacity: 0.5;  padding: 0rem   }
+  100% { opacity: 1;    padding: 0.2rem }
+}
+@-webkit-keyframes fadein-pulse {
+  0%   { opacity: 0;    padding: 0rem   }
+  25%  { opacity: 0.25; padding: 0.2rem }
+  50%  { opacity: 0.5;  padding: 0rem   }
+  100% { opacity: 1;    padding: 0.2rem }
+}
+
+
+.fadein {
+  -webkit-animation: fadein 0.7s;
+  animation: fadein 0.7s;
+}
+.fadein.ng-leave {
+  transition: 300ms linear all;
+  opacity: 1;
+}
+.fadein.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+.fadein-quick {
+  -webkit-animation: fadein 0.4s;
+  animation: fadein 0.4s;
+}
+.fadein-quick.ng-leave {
+  transition: 200ms linear all;
+  opacity: 1;
+}
+.fadein-quick.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+.fadein-slow {
+  -webkit-animation: fadein 180ms;
+  animation: fadein 180ms;
+}
+.fadein-slow.ng-leave {
+  transition: 180ms ease-out all;
+  opacity: 1;
+}
+.fadein-slow.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+
+.fadeout {
+  -webkit-animation: fadeout 0.7s;
+  animation: fadeout 0.7s;
+  opacity: 0;
+}
+.fadeout.ng-leave {
+  transition: 300ms linear all;
+}
+
+
+.transition-left {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:relative;
+}
+.transition-left.ng-enter {
+  -webkit-animation:0.3s enter-left;
+  animation:0.3s enter-left;
+  position:relative;
+}
+.transition-left.ng-enter-active {
+  left:0;
+}
+.transition-left.ng-leave {
+  -webkit-animation:0.3s leave-left;
+  animation:0.3s leave-left;
+  position:relative;
+}
+
+@keyframes enter-left {
+  from { opacity:0; left:100%; }
+  to { opacity:1; left:0; }
+}
+@-webkit-keyframes enter-left {
+  from { opacity:0; left:100%; }
+  to { opacity:1; left:0; }
+}
+
+@keyframes leave-left {
+  from { left:0; top:0; position:absolute; }
+  to  { left:-100%; top:0; position:absolute; }
+}
+@-webkit-keyframes leave-left {
+  from { left:0; top:0; position:absolute; }
+  to  { left:-100%; top:0; position:absolute; }
+}
+
+
+
+.platform-android .bar .title {
+  font-size: 1.8rem;
+  line-height: 4.4rem;
+  font-weight: 400;
+}
+
+/* Header Bar padding Override */
+/* .platform-android .bar .button.button-clear, .bar button.button-clear {
+  padding-right: 8px;
+  padding-left: 8px;
+} */
+
+/* ionic header bar title override */
+.bar .title {
+  font-size: 1.8rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 4.4rem;
+}
+
+.bar .button.button-clear .icon:before,
+.bar .button.button-clear.icon-left:before,
+.bar .button.button-clear.icon-right:before,
+.bar .button.button-clear.icon:before,
+.bar button.button-clear .icon:before,
+.bar button.button-clear.icon-left:before,
+.bar button.button-clear.icon-right:before,
+.bar button.button-clear.icon:before {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.button-icon.icon.button.button-clear.ion-ios-close-outline:before {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.fake-header-bar {
+  min-height: 44px;
+  /* height: 64px; */
+  height: 44px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 106, 106,1);
+  width: 100%;
+}
+
+.platform-ios .fake-header-bar {
+  min-height: 44px;
+  height: 64px;
+  /* height: 44px; */
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 106, 106,1);
+  width: 100%;
+}
+
+.platform-browser .fake-header-bar {
+  min-height: 44px;
+  /* height: 64px; */
+  height: 44px !important;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 106, 106,1);
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.button-socket-connection > i {
+  font-size: 1.2rem !important;
+  line-height: 3.6rem !important;
+}
+
+.button-socket-connection.hidden {
+  display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-nav-bar.hide{
+  display: inline !important;
+}
+ion-nav-bar.hide .nav-bar-block {
+  -webkit-transform: translate(0,-64px);
+  transform: translate(0,-64px);
+}
+ion-nav-bar .nav-bar-block {
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: 0.25s transform;
+  transition: 0.25s transform;
+}
+
+ion-nav-bar ion-header-bar .buttons button,
+ion-nav-bar ion-header-bar .buttons button i {
+  border: none;
+}
+
+ion-nav-bar.custom-style-transparent ion-header-bar {
+  background: none !important;
+  /*display: none !important;*/
+}
+
+ion-nav-bar.custom-style-transparent ion-header-bar .title {
+  display: none !important;
+}
+
+/* Button Size Override */
+.bar .buttons-left .button.button-clear, .bar .buttons-left button.button-clear {
+  padding-right: 1.2rem;
+  padding-left: 0.4rem;
+}
+
+.bar .buttons-right .button.button-clear, .bar .buttons-right button.button-clear {
+  padding-right: 0.4rem;
+  padding-left: 1.2rem;
+}
+
+.header-item.title {
+  left: 4.8rem !important;
+  right: 4.8rem !important;
+}
+
+.platform-android .header-item.title {
+  transition-duration: 0ms;
+  transform: none !important;
+  text-align: center;
+}
+.platform-android .header-item.buttons {
+  transition-duration: 0ms;
+}
+
+.parheaderbg,
+.bar.bar-stable {
+  background-color: rgba(255, 106, 106,1);
+  border: none !important;
+  border-color: transparent !important;
+  background-image: none !important;
+}
+
+
+.bar {
+  border: none !important;
+  border-color: transparent !important;
+  background-image: none !important;
+}
+
+.parheaderbg  .title,
+.parheaderbg  .button-clear,
+.ion-chevron-left.backbtnwh{
+  color: #fff !important;
+}
+
+.row {
+  padding: 0;
+}
+
+
+
+
+
+.message-full-page {
+  text-align: center;
+  padding-top: 9.6rem;
+  height: 100%;
+  background: #F0F0F0;
+}
+
+.message-full-page h2 {
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #464646;
+  text-align: center;
+  margin: 0 0 4vh 0;
+}
+
+.message-full-page img {
+  width: 16rem;
+  display: inline-block;
+}
+
+.message-full-page.has-button img {
+  width: 16rem;
+  display: inline-block;
+}
+
+.message-full-page p {
+  font-family: ProximaNova-Semibold, OpenSans, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #464646;
+  margin: 4rem 0 0 0;
+  padding: 0 2.4rem;
+}
+
+.message-full-page button {
+  background: #FF6A6A;
+  color: #fff;
+  border-radius: 0.2rem;
+  border: none;
+  box-shadow: none;
+  font-family: ProximaNova-Regular, OpenSans, sans-serif;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  line-height: 2.4rem;
+  position: absolute;
+  bottom: 1.6rem;
+  width: calc(100% - 3.2rem);
+  left: 1.6rem;
+  right: 1.6rem;
+}
+
+
+
+.loading-container .loading {
+  width: 100%;
+  height: 100%;
+  display: table;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+}
+
+.loading-container .loading .spinner {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.22);
+  position: relative;
+}
+
+.platform-android .loading-container .loading .spinner {
+  top: 44px;
+  height: calc(100% - 44px);
+}
+
+/*
+Be careful!
+It looks incorrect in a browser, but it works correctly
+on a device, because a device have the status panel.
+*/
+.platform-ios .loading-container .loading .spinner {
+  top: 64px;
+  height: calc(100% - 64px);
+}
+
+.loading-container .loading .spinner.full-spinner {
+  top: 0 !important;
+  height: 100% !important;
+}
+
+.loading-container .loading .spinner svg {
+  width: 46px;
+  height: 46px;
+  stroke: #2e2626;
+  fill: #2e2626;
+  position: relative;
+  top: calc(50% - 23px);
+}
+
+/* Slide ion-pager Override for icon in ionic-angular.min.js & ionic-bundle.min.js */
+span.slider-pager-page {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  opacity: 1 !important;
+}
+
+.ion-pager-override {
+  width: 1rem;
+  height: 1rem;
+  display:block;
+  background: rgba(255,255,255,1);
+  border-radius:50%;
+  border:none;
+}
+
+.active .ion-pager-override {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: transparent;
+  border: 4px solid rgba(255,255,255,1);
+}
+
+.intensity-color- {
+  background: rgba(120, 194, 175, 1);
+}
+.intensity-color-0 {
+  background: rgba(120, 194, 175, 1);
+}
+.intensity-color-1 {
+  background: rgba(131, 163, 115, 1);
+}
+.intensity-color-2 {
+  background: rgba(251, 169, 62, 1);
+}
+.intensity-color-3 {
+  background: rgba(246, 142, 62, 1);
+}
+.intensity-color-4 {
+  background: rgba(242, 104, 51, 1);
+}
+.intensity-color-5 {
+  background: rgba(238, 87, 88, 1);
+}
+
+
+.intensity-color-text- {
+  color: rgba(120, 194, 175, 1);
+}
+.intensity-color-text-0 {
+  color: rgba(120, 194, 175, 1);
+}
+.intensity-color-text-1 {
+  color: rgba(131, 163, 115, 1);
+}
+.intensity-color-text-2 {
+  color: rgba(251, 169, 62, 1);
+}
+.intensity-color-text-3 {
+  color: rgba(246, 142, 62, 1);
+}
+.intensity-color-text-4 {
+  color: rgba(242, 104, 51, 1);
+}
+.intensity-color-text-5 {
+  color: rgba(238, 87, 88, 1);
+}
+
+
+.popup-container .popup {
+  width: calc(100% - 7.2rem) !important;
+}
+
+
+
+.custom-popover,
+.custom-popover ion-content {
+  background: none;
+  text-align: center;
+}
+
+.custom-popover ion-content p {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font: 2rem/2.4rem ProximaNova-Regular, OpenSans, sans-serif;
+  border-radius: 0.4rem;
+  margin: 0 14%;
+  padding: 3rem;
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 1.6rem);
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.flip {}
+
+.flip .flip-card.flipped {
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+.flip .flip-card {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+  overflow: inherit;
+  padding: 0 !important;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.flip .flip-card .face {
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  backface-visibility: hidden ;
+  z-index: 2;
+}
+.flip .flip-card .front-side {
+  position: absolute;
+  z-index: 1;
+  background: white;
+}
+.flip .flip-card .back-side {
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+  background: white;
+}

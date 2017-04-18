@@ -1,0 +1,65 @@
+<ion-view id="iceDiving"
+          hide-back-button="true"
+          hide-nav-bar="false"
+          title="Ice Diving"
+          cache-view="false"
+          no-drag-right
+          no-drag-left
+          ng-init="setStyleHeaderBar('iceDiving')">
+
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon"
+            ui-sref="companion"
+            ng-click="trackEvent('icedivingleave')">
+      <i class="icon-close-ice"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon"
+            ng-click="openModalInfo(); trackEvent('icedivinginfo')">
+      <i class="icon-info-ice"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="guide-slides" scroll="false">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide>
+        <h1 class="toptitle">Step 1</h1>
+        <img src="img/icediving/iceDiving-01.png">
+
+        <p class="bottomdesc">Fill up your sink with cold water.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <h1 class="toptitle">Step 2</h1>
+        <img src="img/icediving/iceDiving-02.png">
+
+        <p class="bottomdesc">Bend over and put your entire face in the water.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <h1 class="toptitle">Step 3</h1>
+        <img src="img/icediving/iceDiving-03.png">
+
+        <p class="bottomdesc">Hold your breath for thirty seconds.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <h1 class="toptitle">Step 4</h1>
+        <img src="img/icediving/iceDiving-04.png">
+
+        <p class="bottomdesc">Repeat two to three times if needed.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <h1 class="toptitle">Presto change-o!</h1>
+        <img src="img/icediving/iceDiving-05.png">
+
+        <p class="action-button" ng-click="sendGuideResults(); trackEvent('icedivingcomplete')">You've done it!</p>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

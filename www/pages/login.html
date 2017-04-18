@@ -1,0 +1,290 @@
+<ion-view title="" id="login" hide-nav-bar="true">
+  <ion-content scroll="true"
+               class="has-footer"
+               has-bouncing="true">
+
+    <div class="content">
+      <ng-include ng-if="loginTemplate" src="loginTemplate"></ng-include>
+    </div>
+  </ion-content>
+
+
+  <ion-footer-bar class="bar bar-footer"
+                  attach-bottom-if-keyboard-open
+                  disable-keyboard-top-bar="true">
+    <button class="underline"
+            ng-if="currentTemplate === 'index'"
+            ng-click="goToLoginWarningOrHome()">
+      <span class="fadein"> Get started without signing in. </span>
+    </button>
+
+    <button ng-if="currentTemplate === 'login_email'"
+            ng-click="switchModeTo('index')">
+      <i class="ion-chevron-left fadein"></i>
+      <span class="fadein"> Back </span>
+    </button>
+
+    <button ng-if="currentTemplate === 'forgot_password'"
+            ng-click="switchModeTo('login_email')">
+      <i class="ion-chevron-left fadein"></i>
+      <span class="fadein"> Back </span>
+    </button>
+
+    <button ng-if="currentTemplate === 'new_password'"
+            ng-click="switchModeTo('login_email')">
+      <i class="ion-chevron-left fadein"></i>
+      <span class="fadein"> Back </span>
+    </button>
+
+    <button class="underline"
+            ng-if="currentTemplate === 'login_warning'"
+            ng-click="switchModeTo('index')">
+      <i class="ion-chevron-left fadein"></i>
+      <span class="fadein"> Go back and sign in. </span>
+    </button>
+  </ion-footer-bar>
+</ion-view>
+
+
+
+
+
+
+
+
+
+<!--
+  Index
+-->
+<script id="tmplt-login-index" type="text/ng-template">
+  <div class="part part-top">
+    <div class="logoholder">
+      <div class="logo-wrapper">
+        <img src="img/logo_white.png"/>
+      </div>
+      <h1> Paralign </h1>
+      <h2> Aligning Minds </h2>
+    </div>
+  </div>
+
+  <div class="part part-bottom fadein tmplt-login-index">
+    <div class="content-rows">
+      <div class="content-row row-info">
+        <p>
+          Posts are always anonymous and are never shared on social media.
+        </p>
+      </div>
+
+      <div class="content-row">
+        <button ng-click="login('facebook'); trackEvent('loginfacebook');">
+          <i class="icon icon-facebook"></i>
+          <span class="button-title"> Sign in with Facebook </span>
+        </button>
+      </div>
+
+      <div class="content-row">
+        <button ng-click="login('google'); trackEvent('logingoogle');">
+          <i class="icon icon-google"></i>
+          <span class="button-title"> Sign in with Google </span>
+        </button>
+      </div>
+
+      <div class="content-row">
+        <button ng-click="switchModeTo('login_email'); trackEvent('loginemail');">
+          <i class="icon icon-email"></i>
+          <span class="button-title"> Sign in with Email </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+
+<!--
+  Login by email
+-->
+<script id="tmplt-login-email" type="text/ng-template">
+  <div class="part part-top fadein tmplt-login-email">
+
+    <form name="loginForm" novalidate>
+      <ul class="list-inputs">
+        <li class="item-title">
+          <span class="title"> Sign in with email. </span>
+        </li>
+
+        <li>
+          <ion-md-input placeholder="Email"
+                        highlight-color="none"
+                        name="email"
+                        ng-model="authUser.email"
+                        ng-pattern="inputPatterns.email"
+                        required="required"
+                        type="email"></ion-md-input>
+          <i class="ion-ios-checkmark-empty input-icon-ok fadein" ng-if="loginForm.email.$valid"></i>
+        </li>
+
+        <li>
+          <ion-md-input placeholder="Password"
+                        highlight-color="none"
+                        name="password"
+                        ng-model="authUser.password"
+                        ng-pattern="inputPatterns.password"
+                        required="required"
+                        type="password"></ion-md-input>
+          <i class="ion-ios-checkmark-empty input-icon-ok fadein" ng-if="loginForm.password.$valid"></i>
+        </li>
+
+        <li class="item-button">
+          <button ng-click="login('email');"
+                  ng-disabled="loginForm.$invalid">
+            <span class="button-title"> Sign In </span>
+          </button>
+        </li>
+
+        <li class="item-forgot-password" ng-click="trackEvent('forgotpassword'); switchModeTo('forgot_password')">
+          Forgot password?
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="part part-bottom"></div>
+</script>
+
+
+
+
+
+
+<!--
+  Warning
+-->
+<script id="tmplt-login-warning" type="text/ng-template">
+  <div class="part part-top">
+    <div class="logoholder">
+      <div class="logo-wrapper">
+        <img src="img/logo_white.png"/>
+      </div>
+      <h1> Paralign </h1>
+      <h2> Aligning Minds </h2>
+    </div>
+  </div>
+
+  <div class="part part-bottom fadein tmplt-login-warning">
+    <div class="content-rows">
+      <div class="content-row clear-row"></div>
+
+      <div class="content-row row-info">
+        <p>
+          Without signing in, you run the risk of losing your thoughts by signing out.
+        </p>
+      </div>
+
+      <div class="content-row row-info">
+        <p>
+          By signing in, you will ensure your thoughts are saved to your account.
+          Keep in mind, your thoughts are always anonymous.
+        </p>
+      </div>
+
+      <div class="content-row">
+        <button ng-click="trackEvent('loginanonymous'); login('anonymous');">
+          <span class="button-title"> I understand. </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+
+
+
+<!--
+  Forgot password
+-->
+<script id="tmplt-forgot-password" type="text/ng-template">
+  <div class="part part-top fadein tmplt-forgot-password">
+    <button class="top-right-button" ng-class="{'ios-mode': isIOS}" ng-click="switchModeTo('login_email')"> Cancel </button>
+
+    <form name="forgotForm" novalidate>
+      <ul class="list-inputs" ng-class="{'ios-mode': isIOS}">
+        <li class="item-title">
+          <span class="title"> Password Reset </span>
+        </li>
+
+        <li class="item-text">
+          <span>
+            Enter your email address and we will send you an email
+            to help you create a new password for your account.
+          </span>
+        </li>
+
+        <li>
+          <ion-md-input placeholder="Email"
+                        highlight-color="none"
+                        name="email"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        ng-model="authUser.email"
+                        ng-pattern="inputPatterns.email"
+                        required="required"
+                        type="email"></ion-md-input>
+          <i class="ion-ios-checkmark-empty input-icon-ok fadein" ng-if="forgotForm.email.$valid"></i>
+        </li>
+
+        <li class="item-button">
+          <button ng-click="trackEvent('resetpassword'); resetPassword(authUser.email);"
+                  ng-disabled="forgotForm.$invalid">
+            <span class="button-title"> Reset Password </span>
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="part part-bottom"></div>
+</script>
+
+
+
+
+
+
+<!--
+  New password
+-->
+<script id="tmplt-new-password" type="text/ng-template">
+  <div class="part part-top fadein tmplt-forgot-password">
+    <button class="top-right-button" ng-class="{'ios-mode': isIOS}" ng-click="$state.go('home')"> Cancel </button>
+
+    <form name="newPassForm" novalidate>
+      <ul class="list-inputs" ng-class="{'ios-mode': isIOS}">
+        <li class="item-title">
+          <span class="title"> Update your password. </span>
+        </li>
+
+        <li>
+          <ion-md-input placeholder="New Password"
+                        highlight-color="none"
+                        name="password"
+                        ng-model="authUser.password"
+                        ng-pattern="inputPatterns.password"
+                        required="required"
+                        type="password"></ion-md-input>
+          <i class="ion-ios-checkmark-empty input-icon-ok fadein" ng-if="newPassForm.password.$valid"></i>
+        </li>
+
+        <li class="item-button">
+          <button ng-click="updatePassword(newPassForm.password);"
+                  ng-disabled="newPassForm.$invalid">
+            <span class="button-title"> Update Password </span>
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="part part-bottom"></div>
+</script>

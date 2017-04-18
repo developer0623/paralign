@@ -1,0 +1,12 @@
+<div id="myMinds"
+     class="popover-selected-thought"
+     ng-click="deselectThought()">
+
+  <div class="thoughts-list fadein" ng-if="selectedThought">
+    <div ng-repeat="thought in [selectedThought] | orderBy: 'createdAt': true">
+      <ng-include src="'pages/myMinds/tmplt-one-thought.html'"></ng-include>
+    </div>
+  </div>
+
+</div>
+

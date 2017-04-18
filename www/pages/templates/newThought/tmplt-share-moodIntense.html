@@ -1,0 +1,13 @@
+<ion-content scroll="false" class="tmplt-moodIntense fadein">
+
+  <h2 class="fadein"> How intense is your mood? </h2>
+
+  <div class="intense-rating fadein">
+    <ion-radio ng-repeat="val in [5, 4, 3, 2, 1, 0]"
+               icon="false"
+               ng-class="'intensity-color-' + val"
+               ng-click="setMoodIntense(val); nextStep();">
+      {{ ::val }}
+    </ion-radio>
+  </div>
+</ion-content>

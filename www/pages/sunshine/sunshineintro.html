@@ -1,0 +1,46 @@
+<ion-view id="sunshine"
+          hide-back-button="true"
+          title=""
+          no-drag-left
+          ng-init="setStyleHeaderBar('transparent')">
+
+  <ion-nav-buttons side="left">
+    <button class="button button-icon"
+            ui-sref="companion">
+      <i class="icon-x"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon"
+            ng-click="openModal('guide-info-sunshine-hill'); trackEvent('sunshineinfo')">
+      <i class="icon-info-sun"></i>
+    </button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="intro" scroll="false">
+    <h1>
+      Sunshine Hill
+    </h1>
+    <h4>
+      GUIDED MEDITATION
+    </h4>
+
+    <ion-slide-box show-pager="false">
+      <ion-slide>
+        <div class="slide-content">
+          <p>
+            Sit in an upright but comfortable position. Now just notice
+            your breath without changing it.
+          </p>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+    <button class="action-button" ui-sref="sunshine" ng-click="trackEvent('sunshinestart'); trackEvent('sunshinethought');">
+      Lets get started!
+    </button>
+  </ion-content>
+</ion-view>
